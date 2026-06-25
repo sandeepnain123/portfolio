@@ -961,8 +961,9 @@ a:hover {
    ========================================================================== */
 @media (max-width: 1024px) {
   .poster-main-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem;
   }
   .poster-container {
     padding: 1.5rem;
