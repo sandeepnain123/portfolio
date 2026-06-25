@@ -1,0 +1,242 @@
+--- PAGE 1 ---
+Page 1 of 
+5 
+ 
+CURRICULUM VITAE 
+NAME: Sandeep  
+YEAR OF BIRTH: 1990 
+PROFESSION: Mechanical Engineer 
+NATIONALITY: Indian 
+CONTACT:sandeep_ps@thapar.edu 
+sandeepnain.kuk@gmail.com 
+Mobile no. - +919416703919 
+ 
+SPECIALIZATION: Thermo-fluid transport processes, biophysics, and biomedical applications 
+using computational fluid dynamics.  Modelling of biological systems based on morphology and 
+hemodynamics. Ai-Driven Cancer detection and segmentation.  
+CURRENT POST: Research Associate, CoE-DSAI, TIET -UQ joint research project in Thapar 
+Institute of Engineering & Technology (TIET), Patiala, Punjab, India. 
+ 
+EDUCATION  
+CoE-DSAI, TIET-UQ, TIET, Patiala, Punjab, India 
+Post Doctorate in data science and AI inclusion in cancer and CFD research. 
+2025-present 
+Thapar Institute of Engineering and Technology, Punjab, India 
+Doctor of Philosophy in Mechanical Engineering. 
+ 
+2018-2024 
+University Institute of Engineering and Technology, Kurukshetra University  
+Kurukshetra, India 
+M. Tech. in Thermal Engineering, 8.28/10 
+ 
+ 
+2015-2017 
+Chaudhary Devilal University, Sirsa, Haryana, India 
+B. Tech in Mechanical Engineering, 68.3% 
+ 
+2008-2011 
+Government Polytechnic Hisar, Hisar, Haryana, India 
+Diploma in Mechanical Engineering, 71.94% 
+  2005-2008 
+ 
+RESEARCH EXPERIENCE  
+TIET, Punjab, India 
+• Research Associate (RA), Center of Excellence in Data Science and Artificial 
+Intelligence (CoE-DSAI), TIET-UQ, “ AI-Driven Modelling and Optimization of 
+Breast Cancer Detection and Treatment through Magnetically Induced Hyperthermia 
+Therapy”. 
+• Senior Research Fellow (SRF), TIET -VT (Thapar-Virginia Tech) Centre of 
+Excellence for  Emerging Materials (CEEMS), “Computational and Experimental 
+Investigation for Optimizing the Magnetic Nano-Particles Hyperthermia”. 
+ 
+ 
+July 2025 
+Present 
+ 
+       Sept. 2023- 
+June 2024 
+ 
+Professional Online Profile:  
+Google Scholar: Sandeep Nain - Google Scholar  
+ORCID: https://orcid.org/0000-0003-1802-6797 
+Research Gate: https://www.researchgate.net/profile/sandeep-Nain  
+LinkedIn: https://www.linkedin.com/in/sandeep-nain-ph-d-28406813a  
+Scopus: Nain, Sandeep - Author details - Scopus 
+--- PAGE 2 ---
+Page 2 of 
+5 
+ 
+• Junior Research Fellow (JRF) in TIET -VT (Thapar -Virginia Tech) CEEMS, 
+“Computational and Experimental  Investigation for Optimizing the Magnetic Nano -
+Particles Hyperthermia”. 
+ 
+Sept. 2021- 
+August 2023 
+Research projects @ collaborations: 
+1. Computational and Experimental Investigation for Optimizing the Magnetic Nano -Particles 
+Hyperthermia @ TIET-VT (Thapar-Virginia Tech) CEEMS. (Finished) 
+2. AI-Driven Breast Cancer Detection , segmentation and Treatment through Magnetically Induced 
+Hyperthermia. @ CoE-DSAI), TIET-University of Queensland. (Ongoing) 
+3. Environmental pollution modelling using AI4PDEs solver based on CNN architecture @ TIET-Imperial 
+college London. (Ongoing). 
+• Thapar Institute of Engineering and Technology, Punjab, India 
+Regular Ph.D. scholar in the Mechanical Engineering Department (MED), 
+Jan 2018 -
+June 2024 
+ 
+ 
+LIST OF PUBLICATIONS 
+Peer-Reviewed Published Journal Articles 
+1. Nain, Sandeep, Neeraj Kumar, and Pramod Kumar Avti. "Computational investigation of the tumor 
+position and ambient conditions on magnetic nanoparticle thermo -therapy." Thermal Science and 
+Engineering Progress  34 (2022): 101396. https://doi.org/10.1016/j.tsep.2022.101396 (SCI 
+Journal, IF - 5.4) 
+2. Nain, Sandeep , Neeraj Kumar, Bhupendra Chudasama, and Pramod Kumar Avti. "The SLP 
+estimation of the nanoparticle systems using size -dependent magnetic properties for the magnetic 
+hyperthermia therapy."  Journal of Magnetism and Magnetic Materials  565 (2023): 170219.  
+https://doi.org/10.1016/j.jmmm.2022.170219 (SCI Journal, IF - 3). 
+3. S. Nain, N. Kumar, and P. K. Avti, “Tumor size dependent MNP dose evaluation in realistic 
+breast tumor models for effective magnetic hyperthermia.,” Med. Eng. Phys., p. 104065, 2023, 
+https://doi.org/10.1016/j.medengphy.2023.104065 (SCI Journal, IF - 2.3). 
+4. Nain, S., Kumar, N., Avti, P.K., 2025. Effect of Arterial Blood Flow on Magnetic Nanoparticle 
+Thermotherapy Applied on a Realistic Breast Tumor Model. Int j numer method biomed eng 41, 
+e70039. https://doi.org/10.1002/cnm.70039 (SCI Journal, IF - 2.4). 
+ 
+Peer-Reviewed Journal Articles (Under review) 
+1. Nain, Sandeep, Neeraj Kumar, and Pramod Kumar Avti  “Magnetic hyperthermia and its dependency on 
+nanoparticles, tissues, and other critical parameters: a comparative study ” in Biomedical Physics & 
+Engineering Express. 
+Ready for Communication Articles 
+--- PAGE 3 ---
+Page 3 of 
+5 
+ 
+1. S. Nain, N. Kumar, and P. K. Avti, “CFD-based Design and Performance analysis of digital twin for 
+cancer prediction and treatment using magnetic fluid hyperthermia. 
+Articles in National and International Conferences 
+• S. Nain, N. Kumar, and P. K. Avti. (2024). Oral paper presented in the “International Conference 
+on Sustainable Development in Chemical and Environmental Engineering”  2024 in TIET, 
+Patiala, India, entitled "Computational evaluation of optimum tumor size -dependent MNP dose for 
+realistic breast tumor models with different injection strategies in magnetic hyperthermia". 
+TEACHING EXPERIENCE 
+Teaching Assistantship of 5-7 hours as per the UGC  norms during the period of 
+JRF and SRF in CEEMS, TIET, Patiala  
+Sept. 2021-June 
+2024 
+Teaching Associate  in MED, Thapar  Institute of Engineering and Technology, 
+Punjab, India 
+July 2018- June 
+2021 
+Lecturer in karnal institute of technology and management (KITM), Karnal, 
+Haryana, India May 2012- June 
+2013 
+Teaching responsibilities: 
+• Delivered individually the quality education for subjects : Engineering Drawing (Semester -1st), 
+Machine Drawing (4th Semester.), Auto cad class (2nd Sem.)  
+• Effective engagement of different Labs i.e., Kinematics of Machine (3 rd), Fluid Machines, IC 
+engines (4th), Heat and Mass Transfer (6 th), Refrigeration and Air Conditionin g (8th), Automobile 
+Engineering Lab (Semester -8th) was done with excellent management skills, effective 
+communication, and innovative teaching methods. 
+• Assigned class tutorials on subjects, i.e., thermodynamics, FM, HMT, Power Plant, and Solar 
+Engineering, which were handled with excellent classroom management and teaching skills. 
+• Provided assistance to senior faculty in various routine academic activities in MED. 
+• Performed invigilation duties in mid-term and end-term examinations.  
+• Maintained records of continuous assessment of the assigned subjects. 
+ 
+EXPERIENCE OF STUDENTS SUPERVISION 
+ Supervised a Master’s student project on “ The effect of c onvection phenomenon during 
+magnetic nanoparticle hyperthermia treatment.”  
+ Supervised a Master’s student project on “Investigation of Microchannel Heat sink and 
+Graphene-Based heat spreaders for thermal management of 3D TSV chip. 
+CONFERENCES/ WORKSHOPS/ SEMINARS 
+• International Conference on Sustainable Development in Chemical and Environmental 
+Engineering (SDCEE-2024); at TIET, Patiala, India. 
+• Faculty Development Program on “computational fluid dynamics” at UIET, KUK, in 
+collaboration with IIT Bombay. 
+ 
+ACHIEVEMENTS, HONORS, AND EXTRACURRICULAR ACTIVITIES 
+--- PAGE 4 ---
+Page 4 of 
+5 
+ 
+Funded for JRF and SRF, in Centre of Excellence for Emerging Materials, TIET-VT 
+Patiala, funded research project 2021-2024 
+Funded for the PhD, Mechanical Engineering Department, TIET, Patiala 2018-2021 
+Fellowship during M.Tech,  from AICTE, India. 2015-2017 
+Graduate Aptitude Test of Engineering (GATE) QUALIFIED with a best GATE 
+(2015) score of 454 /1000 and All India Rank 15753 out of 185758 students. 
+2014, 2015, 
+and 2017 
+Diploma in German Language, Kurukshetra University Kurukshetra, India  2018 
+Certificate Course in German Language, Kurukshetra University Kurukshetra, India 2017 
+   Gold medal in Discus throw in Thapar Institute Olympic games. 2018 
+   Silver medal in Discus throw in Inter-Tech University games. 2019 
+   2nd runner up in 10 km running organized by Patiala Health Club, Patiala. 2019 
+Participate in a six -day Faculty Development Programme  on “computational fluid 
+dynamics” at UIET, KUK, in collaboration with IIT Bombay. Feb 2017 
+National Cadet Corps (NCC) “C” certificate from Ministry of Defense, govt. of    India.  
+2009 
+Ph.D. RESEARCH TOPIC 
+• “Computational and Experimental Investigation for Optimizing the Magnetic Nano particles 
+Hyperthermia”. 
+ 
+ME-THESIS RESEARCH TOPIC 
+• “Computational Modeling and Analysis of 2d Unsteady Heat Convection in Slug Flow Using 
+Physical Law based FVM”. 
+TRAINING AND PROJECTS 
+• Four weeks of training in “Escorts Limited”, Agri Machinery Group in ‘gear and Shaft Area’ (July 
+2007). 
+• Six-week Training in “Yamaha Motor Pvt. India Limited” in ‘Gear manufacturing Area’ (June 
+2009). 
+• Physical Modeling of “Frictional Energy Conversion from railway track” as a minor project in B. 
+Tech. 
+• Physical Modeling of “Over-Head Crane” as a major project in B. Tech. 
+• Computational Modeling of convection Heat Transfer in slug flow in UIET, KUK during dissertation 
+Work in M. Tech Program. 
+• Development of solver using Finite volume method for bio-heat application in hyperthermia therapy. 
+• Computationally investigating the therapeutic effect of different injection strategies in real patient data. 
+• Experimentally evaluation of the temperature dis tribution by the different MNP distributions in a 
+gel phantom. 
+ 
+ 
+--- PAGE 5 ---
+Page 5 of 
+5 
+ 
+SOFTWARE and PROGRAMMING SKILLS 
+• MATLAB, SCI-LAB 
+• COMSOL MULTI-PHYSICS, ANSYS  
+• SOLID WORK, AUTO-CAD, G-MESH, ORIGIN 
+• Fortran, C++, PYTHON, R, and ML (basics) 
+REFERENCES 
+Dr. Neeraj Kumar, 
+Assistant Professor, 
+Mechanical Engineering Department, 
+Thapar Institute of Engineering and Technology, Patiala, Punjab, India-
+147004. Email: neerajkumar@thapar.edu 
+My doctoral advisor, and possesses extensive knowledge in the field of computational fluid dynamics 
+and numerical techniques for biological physics and heat transfer assessment. 
+Dr. Pramod Kumar Avti, 
+Additional Professor,  
+Post Graduate Institute of Medical Education and Research (PGIMER), Chandigarh 160012, India. 
+Email: avti.pramodkumar@pgimer.edu.in,  
+My doctoral advisor, and possesses knowledge in the field of nano-bio materials, tissue engineering, 
+regenerative medicine, and biomedical imaging. 
+Dr. Bhupendra kumar Chudasama 
+Associate Dean, Research and Development Cell 
+Professor, School of Physics & Materials Science, 
+Thapar Institute of Engineering and Technology, Patiala, Punjab, India-
+147004. Email: bnchudasama@thapar.edu 
+My mentor and Co-Project invigilator  specialize in the field of nanomedicine for cancer 
+theranostics and Magnetic Hyperthermia application. 
+ 
+PERSONAL DETAILS 
+  Gender / Marital Status: Male / Married 
+Languages Known- English, Hindi. 
+Certified that the information given and being submitted here is true to the best of my knowledge 
+ 
+  
+  (Sandeep)                    April, 2026 
+ 
+ 
+

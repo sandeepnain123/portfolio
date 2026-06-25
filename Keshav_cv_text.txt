@@ -1,0 +1,49 @@
+--- PAGE 1 ---
+KESHA V JUNEJA
+Thapar Institute of Engineering and Technology, Patiala
++91 88724 44018|kjuneja be24@thapar.edu|linkedin.com/in/keshav-juneja|github.com/Keshavj-13
+EDUCA TION
+Thapar Institute of Engineering and T echnologyExpected May 2028
+Bachelor of Engineering, Computer Engineering CGPA: 8.49
+ACHIEVEMENTS
+•HackTU 6.0 MLH Hackathon Winner (2025) — first place among 300+ participants
+•Solved 160+ algorithmic problems on LeetCode in C++, focused on dynamic programming, graphs, and binary
+search
+TECHNICAL SKILLS
+LanguagesC++, Python, Java, SQL, Bash
+F rameworksFastAPI, Next.js 14, PyTorch, scikit-learn, XGBoost, LightGBM
+ML / DataNumPy, pandas, Optuna, SHAP, LIME, HDF5
+T oolsGit, Docker, Linux, Slurm, Firebase
+EXPERIENCE
+Research Intern — Thapar Institute of Engineering and T echnologyJan 2025 – Present
+·Built configuration-driven training pipelines for CNN-based PDE surrogate models (Imperial College London):
+Slurm job templates, dataset loaders, and parameterized execution enabling reliable benchmark reruns across 8+
+experiment configurations on multi-GPU nodes.
+·Packaged and validated published 3D breast cancer segmentation architectures on institutional HPC clusters
+(University of Queensland): built multi-GPU Slurm workflows and evaluation scripts achieving reproducible results
+across node configurations.
+·Eliminated checkpoint corruption under node preemption by refactoring multi-GPU synchronization logic, reducing
+experiment restart overhead by∼40% and improving distributed job observability through structured logging.
+PROJECTS
+AxiomCloud — AutoML Platform(axiomcloud.vercel.app·github) 2024 – 2025
+·Built and deployed a full-stack AutoML platform (FastAPI + Next.js 14) using modular object-oriented design,
+supporting 9 algorithms across classification and regression with automatic task detection, Optuna hyperparameter
+tuning, SHAP and LIME explainability, and Firebase-authenticated REST inference.
+·Served 1,700+ API requests at 75 ms average latency; added automated validation covering all 9 model endpoints
+and Dockerized the platform for local and remote training modes.
+Battery Thermal Management — RL Controller(github) 2024 – 2025
+·Built a GPU-accelerated 12-zone electrothermal simulator and trained a GraphSAGE+LSTM+PPO policy bench-
+marked against 9 baseline controllers across 6 regulatory drive cycles (FTP, UDDS, HWFET, US06, SC03, LA92);
+co-authored a manuscript submitted toNature Communications.
+·Policy achieved 53% cooling energy reduction (158 Wh vs 339 Wh baseline), maintained all zones below 40 ◦C, and
+reduced maximum inter-zone thermal spread from 2.16 ◦C to 1.07 ◦C.
+T radeAssist — Quantitative Research Platform(github) 2024 – 2025
+·Built a modular, extensible Python research platform for Indian equities computing EMA, RSI, ATR, and VW AP
+with wallet-aware risk budgeting and a constrained actor-critic RL policy generating BUY/SELL/HOLD signals
+across 30 NSE stocks; signals delivered via Telegram bot.
+·Implemented walk-forward backtesting and 300-iteration Monte Carlo stress testing with transaction cost modeling;
+the evaluation pipeline rejected overfit strategies before live deployment.
+Neural PDE Surrogate — CFD Acceleration(Imperial College London) 2025
+·Implemented and benchmarked CNN-based surrogate models for channel-flow PDE problems, replacing finite-
+element solvers with substantially faster inference; built a Slurm-native grid-search harness with automatic result
+aggregation for reproducible ablation runs across shared HPC queues.

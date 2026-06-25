@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Sandeep Nain (Ph.D.) — Mechanical Engineer & Researcher specializing in CFD, biophysics, and AI-driven cancer detection at TIET-University of Queensland." />
+  <meta name="keywords"
+    content="CFD, computational fluid dynamics, magnetic hyperthermia, cancer detection, AI, biomedical engineering, TIET, Sandeep Nain" />
+  <meta name="author" content="Sandeep Nain (Ph.D.)" />
+  <title>Sandeep Nain (Ph.D.) | Mechanical Engineer & Researcher</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=16" />
+  <style>
+    /* Additional custom styling for extracted images integration */
+    .scientific-fig-container {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      background: var(--bg-primary);
+      border: var(--border-light);
+      padding: 0.75rem;
+      margin-top: 0.5rem;
+    }
+
+    .scientific-fig-img {
+      width: 100%;
+      height: auto;
+      border: var(--border-light);
+      background: #ffffff;
+      object-fit: contain;
+    }
+
+    .fig-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--maroon);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .fig-caption {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.35;
+    }
+
+    .gallery-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+    }
+
+    .gallery-img-wrap {
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border-color var(--transition);
+    }
+
+    .gallery-img-wrap:hover,
+    .gallery-img-wrap.active-thumb {
+      border-color: var(--maroon);
+    }
+
+    .tab-btn-row {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 0.4rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      background: var(--bg-primary);
+      border: var(--border-light);
+      cursor: pointer;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .tab-btn.active-tab {
+      background: var(--maroon);
+      color: white;
+      border-color: var(--maroon);
+    }
+
+    .header-logos {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      flex-shrink: 0;
+      margin-right: 2rem;
+    }
+
+    .header-logo-img {
+      height: 95px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.75rem;
+      margin: 0.5rem 0;
+    }
+
+    .data-table th {
+      background: var(--bg-primary);
+      font-weight: 700;
+      text-align: left;
+      padding: 0.4rem;
+      border: var(--border-light);
+    }
+
+    .data-table td {
+      padding: 0.4rem;
+      border: var(--border-light);
+    }
+
+    .data-table tr:nth-child(even) {
+      background: #fdfdfd;
+    }
+
+    /* Custom overrides for user requests */
+    .poster-header {
+      background: var(--bg-card) !important;
+      border: 1px solid #CBD5E1 !important;
+      border-radius: 12px !important;
+      padding: 1.5rem 2.5rem !important;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06) !important;
+      margin-bottom: 2rem !important;
+    }
+    
+    .left-column, .right-column {
+      background: var(--bg-card) !important;
+      border: 1px solid #CBD5E1 !important;
+      border-radius: 12px !important;
+      padding: 1.8rem !important;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06) !important;
+    }
+
+    .section-label {
+      font-family: 'Inter', sans-serif !important;
+      font-weight: 800 !important;
+      font-size: 1.8rem !important;
+      color: #0F4C81 !important;
+      border-bottom: 3px solid var(--maroon) !important;
+      padding-bottom: 0.5rem !important;
+      display: inline-block !important;
+      letter-spacing: 0.5px !important;
+    }
+    
+    .nav-arrow {
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      font-size: 0.8em;
+      margin-left: 4px;
+    }
+    
+    .nav-dropdown:hover .nav-arrow {
+      opacity: 1;
+    }
+    
+    .dropdown-content {
+      min-width: 100% !important;
+      width: max-content !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="poster-container">
+
+    <!-- HEADER -->
+    <header class="poster-header">
+      <div class="header-brand">
+        <img class="header-logo-img" src="images/image1.png" alt="Thapar Institute Logo" />
+        <div class="header-author-info" style="display: flex; flex-direction: column; gap: 0.25rem;">
+          <span class="author-name">Sandeep Nain (Ph.D.)</span>
+          <div class="academic-profiles-row" style="margin-top: 0.25rem; justify-content: flex-start; gap: 1rem; flex-wrap: wrap;">
+            <a href="https://scholar.google.com/citations?user=sandeepnain" class="academic-link" target="_blank" rel="noopener" aria-label="Google Scholar Profile">
+              <svg class="academic-icon-svg" viewBox="0 0 24 24"><path d="M12 2L1 9l11 7 9-5.73V17h2V9L12 2zM5.17 11.22L12 15.56l6.83-4.34V12.5L12 16.84l-6.83-4.34v-1.28z" /></svg> Scholar
+            </a>
+            <a href="https://orcid.org/0000-0003-1802-6797" class="academic-link" target="_blank" rel="noopener" aria-label="ORCID Profile">
+              <svg class="academic-icon-svg" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-2.89 15.53H7.55V8.19h1.56v9.34zm-.78-10.43c-.53 0-.96-.43-.96-.95 0-.53.43-.96.96-.96.53 0 .96.43.96.96 0 .52-.43.95-.96.95zm8.9 10.43h-1.56V13.8c0-1.89-.68-2.61-1.92-2.61-1.07 0-1.78.72-2.02 1.62v4.72H11.8V8.19h1.56v1.31c.46-.72 1.3-1.44 2.68-1.44 1.83 0 3.09 1.15 3.09 3.86v5.61z" /></svg> ORCID
+            </a>
+            <a href="https://www.researchgate.net/profile/sandeep-Nain" class="academic-link" target="_blank" rel="noopener" aria-label="ResearchGate Profile">
+              <svg class="academic-icon-svg" viewBox="0 0 24 24"><path d="M19.38 10.59c-.44-.75-1.12-1.33-2.04-1.72-.9-.39-1.99-.59-3.23-.59H9.41v9.34h1.56V15.5h2.14l2.45 4.38h1.83l-2.67-4.66c1.02-.27 1.82-.82 2.38-1.63.56-.82.84-1.87.84-3.15 0-1.41-.28-2.47-.86-3.22h.01zm-3.08 3.52c-.37.38-.94.57-1.7.57h-3.64v-3.7h3.64c.75 0 1.32.19 1.7.57.38.38.57.91.57 1.58 0 .66-.19 1.2-.57 1.58v-.6z" /></svg> RGate
+            </a>
+            <a href="https://www.linkedin.com/in/sandeep-nain-ph-d-28406813a" class="academic-link" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+              <svg class="academic-icon-svg" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" /></svg> LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+      <nav class="header-nav">
+        <a href="#projects-section" class="nav-link active">Home</a>
+        <a href="javascript:void(0)" class="nav-link" onclick="openAboutModal()">About</a>
+        <a href="#projects-section" class="nav-link">Portfolio</a>
+        <a href="javascript:void(0)" class="nav-link" onclick="openCollaborationModal()">Collaboration</a>
+        
+        <div class="nav-dropdown">
+          <button class="nav-link dropdown-btn" style="border: none; background: transparent; cursor: pointer; font-family: inherit; font-size: inherit; color: var(--text-muted); padding: 0; outline: none; display: flex; align-items: center;">Publications<span class="nav-arrow">▼</span></button>
+          <div class="dropdown-content">
+            <a href="#publications-section" class="nav-link" style="display: block; padding: 0.8rem 1rem; color: #1E293B; text-decoration: none;">Journals</a>
+            <a href="#publications-section" class="nav-link" style="display: block; padding: 0.8rem 1rem; color: #1E293B; text-decoration: none;">Conferences</a>
+          </div>
+        </div>
+
+        <a href="#faq-section" class="nav-link">FAQ</a>
+        <a href="#reachout-section" class="nav-link">Reachout</a>
+</nav>
+    </header>
+
+    <!-- HERO TYPOGRAPHY -->
+    <div class="hero-container">
+      <h1 class="research-title">Computational Modeling and AI-Integrated Hyperthermia Therapy</h1>
+      <p class="research-subtitle">AI-Driven Solutions for Thermo-fluids &amp; Healthcare</p>
+    </div>
+
+
+
+    <!-- RESEARCH HIGHLIGHTS SECTION -->
+    <section aria-labelledby="highlights-heading" class="highlights-section">
+      <div class="section-header-row" style="margin-top: 1rem;">
+        <h2 id="highlights-heading" class="section-label">Research Highlights</h2>
+      </div>
+
+      <div class="highlights-grid">
+        <!-- Category 1 -->
+        <div class="highlight-card" style="cursor: pointer;" onclick="openHighlightModal(this)">
+          <div style="display: flex; gap: 5px; width: 100%; height: 180px; background: #fff;">
+            <img src="images/algo_flow_chart_image24.png" alt="AI-ML in Healthcare" style="flex: 1; object-fit: contain; min-width: 0;" />
+            <img src="images/15_1_26_image84.jpeg" alt="AI-ML in Healthcare 2" style="flex: 1; object-fit: cover; min-width: 0;" />
+          </div>
+          <h3 class="highlight-title">AI-ML in Healthcare</h3>
+          <div class="highlight-desc" style="display: none;">
+            Our AI-driven research utilizes advanced deep learning architectures, such as boundary-enhanced 3D U-Nets (BEAT-Net), to accurately segment complex tumor morphologies from multi-sequence MRI scans. This automates detection, providing highly precise, patient-specific 3D tumor models that serve as a robust foundation for customized treatment strategies. By seamlessly integrating machine learning algorithms into clinical workflows, we aim to greatly accelerate diagnostics, reduce human error in radiological assessments, and enable targeted thermal treatments for improved clinical decision-making.
+          </div>
+        </div>
+        
+        <!-- Category 2 -->
+        <div class="highlight-card" style="cursor: pointer;" onclick="openHighlightModal(this)">
+          <div style="display: flex; gap: 5px; width: 100%; height: 180px; background: #fff;">
+            <img src="images/s2_poster_project_014_magnetic_hyperthermia__image14.png" alt="Disease Modelling 1" style="flex: 1; object-fit: contain; min-width: 0;" />
+            <img src="images/s2_poster_project_014_magnetic_hyperthermia__image15.png" alt="Disease Modelling 2" style="flex: 1; object-fit: contain; min-width: 0;" />
+          </div>
+          <h3 class="highlight-title">Disease Modelling</h3>
+          <div class="highlight-desc" style="display: none;">
+            We leverage high-fidelity Computational Fluid Dynamics (CFD) to accurately model complex heat transfer and fluid flow phenomena within biological environments. By simulating transient flow patterns, species transport through convection and diffusion, and Darcy's equations in porous tissue, we can reliably predict localized stresses and temperature evolution. This comprehensive modeling framework helps map out tumor necrosis during thermal therapies, validates computational predictions against experimental data, and provides deep insights into vascular hemodynamics for safer clinical hypothesis testing.
+          </div>
+        </div>
+        
+        <!-- Category 3 -->
+        <div class="highlight-card" style="cursor: pointer;" onclick="openHighlightModal(this)">
+          <div style="display: flex; gap: 5px; width: 100%; height: 180px; background: #fff; overflow: hidden;">
+            <img src="images/poster_mnp_hyperthermia_image13.jpeg" alt="Synthetic Biology 1" style="flex: 1; object-fit: cover; min-width: 0;" />
+            <div style="flex: 1; display: flex; justify-content: center; align-items: center; overflow: hidden;">
+              <img src="images/poster_mnp_hyperthermia_image23.jpeg" alt="Synthetic Biology 2" style="width: 180px; height: 180px; object-fit: cover; transform: rotate(90deg);" />
+            </div>
+            <img src="images/synthesisMNP.png" alt="Synthetic Biology 3" style="flex: 1; object-fit: cover; min-width: 0;" />
+          </div>
+          <h3 class="highlight-title">Synthetic Biology</h3>
+          <div class="highlight-desc" style="display: none;">
+            Our synthetic biology research focuses on the optimization of superparamagnetic nanoparticles (MNPs) tailored for localized therapeutic applications. We rigorously analyze size-dependent magnetic properties and specific loss power (SLP) to maximize thermal energy delivery directly at tumor sites. By exploring different injection strategies and optimal MNP dosing for realistic breast tumor models, we aim to develop highly targeted magnetic hyperthermia protocols that efficiently destroy cancer cells while completely preserving the integrity of surrounding healthy tissues.
+          </div>
+        </div>
+        
+        <!-- Category 4 -->
+        <div class="highlight-card" style="cursor: pointer;" onclick="openHighlightModal(this)">
+          <img src="images/deviceMNPH.png" alt="Medical Device Development" class="highlight-img" style="height: 180px; object-fit: contain; width: 100%; background: #fff;" />
+          <h3 class="highlight-title">Medical Device Development</h3>
+          <div class="highlight-desc" style="display: none;">
+            We successfully translate complex biophysical simulations and AI-driven predictive models into practical, life-saving medical devices and robust treatment protocols. Our team rigorously evaluates the performance of advanced thermo-fluid devices in clinical settings, ensuring highly accurate dosimetry and precise thermal control during magnetic hyperthermia therapies. By systematically testing heat dissipation and mapping thermal profiles in simulated environments, this research fundamentally refines device design and operational parameters, ultimately delivering reliable, non-invasive therapeutic tools for healthcare practitioners.
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- MAIN TWO-COLUMN POSTER LAYOUT -->
+    <div class="poster-main-grid" id="projects-section">
+
+      <!-- LEFT COLUMN: INTEGRATIVE RESEARCH & METHODOLOGIES -->
+      <main class="left-column">
+
+        <div class="section-header-row" style="margin-top: 0; text-align: left; align-items: flex-start;">
+          <h2 class="section-label">Integrative Research &amp; Methodologies</h2>
+        </div>
+
+        <div class="methodology-grid">
+          <!-- Card 1: AI-Driven Cancer Detection & Modeling -->
+          <div class="methodology-card" style="cursor: pointer;" onclick="openMethodologyModal('ai-cancer')">
+            <h4 class="methodology-card-title">AI-Driven Cancer Detection &amp; Modeling</h4>
+            <div class="methodology-card-images">
+              <div class="methodology-row-2">
+                <img class="methodology-img" src="images/algo_flow_chart_image21.png" alt="Neural Net" />
+                <img class="methodology-img" src="images/doc_image2.png" alt="MRI Slice" />
+              </div>
+              <img class="methodology-img" src="images/doc_image6.png" style="height: 110px;" alt="Density Curve" />
+            </div>
+          </div>
+
+          <!-- Card 2: CFD in Healthcare -->
+          <div class="methodology-card" style="cursor: pointer;" onclick="openMethodologyModal('cfd')">
+            <h4 class="methodology-card-title">Computational Fluid Dynamics (CFD) in Healthcare</h4>
+            <div class="methodology-card-images">
+              <div class="methodology-row-2">
+                <img class="methodology-img" src="images/image6.JPG" alt="CFD Lung model" />
+                <img class="methodology-img" src="images/image8.PNG" alt="Channel Flow Plot" />
+              </div>
+              <img class="methodology-img" src="images/image7.PNG" style="height: 110px;" alt="Flow Validation Chart" />
+            </div>
+          </div>
+
+          <!-- Card 3: Magnetic Hyperthermia Optimization -->
+          <div class="methodology-card" style="cursor: pointer;" onclick="openMethodologyModal('hyperthermia')">
+            <h4 class="methodology-card-title">Magnetic Hyperthermia Optimization</h4>
+            <div class="methodology-card-images">
+              <div class="methodology-row-2">
+                <img class="methodology-img" src="images/image3.png" alt="MNP AC Excitation" />
+                <img class="methodology-img" src="images/image12.png" alt="Temperature mesh" />
+              </div>
+              <img class="methodology-img" src="images/dsai_ppt_image15.jpeg" style="height: 110px; object-fit: cover;"
+                alt="Mammary artery breast tumor" />
+            </div>
+          </div>
+        </div>
+
+        <!-- EXPLORE PROJECTS SECTION HEADING -->
+        <div class="section-header-row" style="margin-top: 3rem; margin-bottom: 2rem;">
+          <h2 class="section-label">Explore Interactive Projects</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <!-- MODULE 1: BREAST SEGMENTATION MODEL -->
+        <section id="projects-start" class="module-card">
+          <h3 class="module-title">AI-Driven Breast Cancer Segmentation (BEAT-Net) — DSAI-UQ TIET Joint Project</h3>
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 0.8rem; color: var(--text-muted); margin-top: -0.25rem; margin-bottom: 0.5rem; font-weight: 600;">
+            <span>Project ID: DSAI2025-HM-1005 |</span>
+            <a href="https://dsai.thapar.edu/projects" target="_blank" style="display: flex; align-items: center; gap: 8px; color: #0F4C81; text-decoration: none; font-size: 1.1rem; font-weight: 800; background: #f0f7ff; padding: 4px 10px; border-radius: 6px; border: 1px solid #cce3ff; transition: all 0.2s ease;">
+              <img src="images/dsai_uq_logo.png" alt="DSAI Logo" style="height: 24px; width: auto;" />
+              DSAI Projects Portal
+            </a>
+          </div>
+
+          <div class="tab-btn-row">
+            <button class="tab-btn active-tab" onclick="switchSegTab('mri')">1. Input Dataset</button>
+            <button class="tab-btn" onclick="switchSegTab('arch')">2. BEAT-Net Architecture</button>
+            <button class="tab-btn" onclick="switchSegTab('out')">3. Segmentation Outputs</button>
+            <button class="tab-btn" onclick="switchSegTab('ablation')">4. Ablation Study</button>
+          </div>
+
+          <!-- Tab 1: Input DCE-MRI -->
+          <div id="seg-tab-mri" class="scientific-fig-container">
+            <img class="scientific-fig-img" src="images/doc_image1.png" style="max-height: 350px; object-fit: contain;" alt="Multi-Sequence Input DCE MRI" />
+            <div class="fig-label">Figure 1.1: Multi-Sequence Input DCE-MRI</div>
+            <div class="fig-caption">Clinical DCE-MRI patient dataset showing spatial orientations (Coronal, Transverse,
+              and Sagittal planes) parsed as multi-channel 3D volume inputs of dimensions 96 (D) &times; 128 (H) &times;
+              128 (W) to segment complex morphology profiles and localize tumor regions.</div>
+          </div>
+
+          <!-- Tab 2: Proposed BEAT-Net Architecture -->
+          <div id="seg-tab-arch" class="scientific-fig-container" style="display: none;">
+            <img class="scientific-fig-img" src="images/grapgical.png" style="max-height: 400px; object-fit: contain;" alt="Proposed BEAT-Net Architecture" />
+            <div class="fig-label">Figure 1.2: Proposed BEAT-Net (Boundary-Enhanced Attention 3D U-Net) Architecture
+            </div>
+            <div class="fig-caption">A detailed 3D U-Net variant incorporating a 3D ResNet-50 backbone encoder,
+              transposed convolution decoders, skip connections, and custom Boundary-Aware Spatial
+              Squeeze-and-Excitation (scSE) blocks to focus on complex tumor boundaries, optimized via composite DiceCE
+              and Focal Tversky loss.</div>
+          </div>
+
+          <!-- Tab 3: Segmentation Outputs -->
+          <div id="seg-tab-out" class="scientific-fig-container" style="display: none;">
+            <img id="seg-main-display" class="scientific-fig-img" src="images/project_breast_seg_30_1_26_image21.png"
+              style="max-height: 380px; object-fit: contain;" alt="Segmentation Output" />
+            <div class="fig-label" id="seg-main-title">Figure 1.3: Voxel-Wise Segmentation Overlay (Dice 86.44%)</div>
+            <div class="fig-caption">Clinical overlays comparing expert Ground Truth boundaries against model
+              predictions on Yunnan and MAMA-MIA benchmark test cases. Select a case below:</div>
+
+            <div class="gallery-row" style="grid-template-columns: repeat(5, 1fr); gap: 0.4rem; margin-top: 1rem;">
+              <div class="gallery-img-wrap active-thumb"
+                onclick="updateSegGallery('project_breast_seg_30_1_26_image21.png', 'Voxel-Wise Segmentation Overlay (Dice 86.44%)')">
+                <img src="images/project_breast_seg_30_1_26_image21.png"
+                  style="width: 100%; height: 50px; object-fit: cover;" alt="Case 1 (86.44%)" />
+              </div>
+              <div class="gallery-img-wrap"
+                onclick="updateSegGallery('project_breast_seg_30_1_26_image22.png', 'Transverse Plane Segmentation Comparison (Dice 82.80%)')">
+                <img src="images/project_breast_seg_30_1_26_image22.png"
+                  style="width: 100%; height: 50px; object-fit: cover;" alt="Case 2 (82.80%)" />
+              </div>
+              <div class="gallery-img-wrap"
+                onclick="updateSegGallery('project_breast_seg_30_1_26_image28.png', 'Multi-Phase DCE-MRI Tumor Contrast Fit (Dice 79.29%)')">
+                <img src="images/project_breast_seg_30_1_26_image28.png"
+                  style="width: 100%; height: 50px; object-fit: cover;" alt="Case 3 (79.29%)" />
+              </div>
+              <div class="gallery-img-wrap"
+                onclick="updateSegGallery('project_breast_seg_30_1_26_image29.png', 'Coronal Slice Delineated Tumor Boundaries (Dice 76.70%)')">
+                <img src="images/project_breast_seg_30_1_26_image29.png"
+                  style="width: 100%; height: 50px; object-fit: cover;" alt="Case 4 (76.70%)" />
+              </div>
+              <div class="gallery-img-wrap"
+                onclick="updateSegGallery('doc_image3.png', '3D Patient-Specific Voxel Segmentation Reconstruction (Dice 92.74%)')">
+                <img src="images/doc_image3.png" style="width: 100%; height: 50px; object-fit: cover;"
+                  alt="Case 5 (92.74%)" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 4: Ablation Study -->
+          <div id="seg-tab-ablation" class="scientific-fig-container" style="display: none;">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Dataset</th>
+                  <th>Configuration</th>
+                  <th>Dice Score (DSC)%</th>
+                  <th>IoU (Jaccard)</th>
+                  <th>Precision (PPV)</th>
+                  <th>Recall/Sens.</th>
+                  <th>HD95 (mm)</th>
+                  <th>ASD (mm)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="3" style="font-weight: 700; background-color: var(--bg-primary);">Yunnan Hospital (100
+                    Cases)</td>
+                  <td>Baseline 1 (Vanilla U-Net)</td>
+                  <td>80.53%</td>
+                  <td>69.82%</td>
+                  <td>80.71%</td>
+                  <td>83.85%</td>
+                  <td>36.95</td>
+                  <td>9.38</td>
+                </tr>
+                <tr>
+                  <td>Baseline 2 (3D ResNet-50)</td>
+                  <td>82.80%</td>
+                  <td>72.86%</td>
+                  <td>79.71%</td>
+                  <td>89.86%</td>
+                  <td>31.69</td>
+                  <td>6.71</td>
+                </tr>
+                <tr style="background-color: rgba(125, 28, 45, 0.06); font-weight: 700; color: var(--maroon);">
+                  <td>Proposed BEAT-Net</td>
+                  <td>86.44%</td>
+                  <td>77.49%</td>
+                  <td>87.44%</td>
+                  <td>87.09%</td>
+                  <td>18.20</td>
+                  <td>2.53</td>
+                </tr>
+                <tr>
+                  <td rowspan="2" style="font-weight: 700; background-color: var(--bg-primary);">MAMA-MIA (1,506 Cases)
+                  </td>
+                  <td>Reference Benchmark [2]</td>
+                  <td>76.10%</td>
+                  <td>64.40%</td>
+                  <td>74.20%</td>
+                  <td>81.30%</td>
+                  <td>25.40</td>
+                  <td>8.12</td>
+                </tr>
+                <tr style="background-color: rgba(125, 28, 45, 0.06); font-weight: 700; color: var(--maroon);">
+                  <td>Proposed BEAT-Net</td>
+                  <td>80.18%</td>
+                  <td>69.42%</td>
+                  <td>78.87%</td>
+                  <td>84.98%</td>
+                  <td>18.13</td>
+                  <td>6.02</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="fig-label">Table 1.1: Quantitative Metric Comparison and Ablation Study</div>
+            <div class="fig-caption">Detailed evaluation metrics of the proposed BEAT-Net compared to standard baseline
+              networks. Incorporating the boundary-aware custom scSE attention layer yields a 5.9% Dice score
+              improvement and drops the Hausdorff Distance (HD95) by 50% (from 36.95 to 18.20 mm), validating superior
+              boundary contour delineation.</div>
+          </div>
+        </section>
+
+        <!-- MODULE 2: MAGNETIC HYPERTHERMIA PROPERTIES -->
+        <section class="module-card">
+          <h3 class="module-title">Magnetic Hyperthermia Project: Multi-Scale Physics &amp; Design</h3>
+
+          <div class="tab-btn-row">
+            <button class="tab-btn active-tab" onclick="switchHypTab('math')">1. Heating Mechanism</button>
+            <button class="tab-btn" onclick="switchHypTab('exp')">2. Size &amp; Magnetization</button>
+            <button class="tab-btn" onclick="switchHypTab('clinical')">3. Governing Equations</button>
+          </div>
+
+          <!-- Tab 1: Heating Mechanism -->
+          <div id="hyp-tab-math" class="scientific-fig-container">
+            <div class="gallery-row" style="grid-template-columns: 1.2fr 1fr 1fr; gap: 0.4rem;">
+              <img class="scientific-fig-img" src="images/image3.png" alt="Point heat source model" />
+              <img class="scientific-fig-img" src="images/image4.png" alt="Neel relaxation" />
+              <img class="scientific-fig-img" src="images/image5.png" alt="Brownian relaxation" />
+            </div>
+            <div class="fig-label">Figure 2.1: MNP AC Excitation and Relaxation Mechanisms</div>
+            <div class="fig-caption">Magnetic nanoparticle hyperthermia mechanism under alternating magnetic field (AMF)
+              excitation. For single domain superparamagnetic nanoparticles, heat is generated by: (a) <strong>Néel
+                relaxation:</strong> rotation of magnetic moment inside the crystal core, and (b) <strong>Brownian
+                relaxation:</strong> physical rotation of the entire nanoparticle within fluid suspensions.</div>
+          </div>
+
+          <!-- Tab 2: Saturation Magnetization & SLP -->
+          <div id="hyp-tab-exp" class="scientific-fig-container" style="display: none;">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Size (nm)</th>
+                  <th>CoFe<sub>2</sub>O<sub>4</sub> Blocking Temp (K)</th>
+                  <th>MnFe<sub>2</sub>O<sub>4</sub> Blocking Temp (K)</th>
+                  <th>Fe<sub>3</sub>O<sub>4</sub> Blocking Temp (K)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>8</td>
+                  <td>260</td>
+                  <td>110</td>
+                  <td>125</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>322</td>
+                  <td>140</td>
+                  <td>137</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>370</td>
+                  <td>180</td>
+                  <td>152</td>
+                </tr>
+                <tr>
+                  <td>15</td>
+                  <td>420</td>
+                  <td>225</td>
+                  <td>175</td>
+                </tr>
+                <tr>
+                  <td>20</td>
+                  <td>470</td>
+                  <td>275</td>
+                  <td>215</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="fig-label">Table 2.1: Particle Size-Dependent Anisotropy and Blocking Temperature</div>
+            <div class="fig-caption">Size-dependent magnetic anisotropy ($K_{eff}$) evaluated as a function of blocking
+              temperature ($T_B$) extracted from experimental data. Dynamic saturation magnetization ($M_S$) and
+              Specific Loss Power (SLP) are calculated based on variable core volumes ($D^3$) for
+              CoFe<sub>2</sub>O<sub>4</sub>, Fe<sub>3</sub>O<sub>4</sub>, and MnFe<sub>2</sub>O<sub>4</sub> systems.
+            </div>
+          </div>
+
+          <!-- Tab 3: Governing Mathematical Model -->
+          <div id="hyp-tab-clinical" class="scientific-fig-container" style="display: none;">
+            <img class="scientific-fig-img" src="images/image9.png" style="max-height: 380px; object-fit: contain;"
+              alt="Governing Equations Chart" />
+            <div class="fig-label">Figure 2.2: Coupled Flow-Mass-Thermal Governing Equations</div>
+            <div class="fig-caption">Governing equations mapping Darcy's flow equations for tissue pressure, MNPs
+              transport &amp; attachment dynamics during injection, and the Pennes Bioheat transfer equation
+              incorporating metabolic heat generation (Q_m) and spatial electromagnetic energy absorption (Q_E) to
+              calculate the temperature field in the tissue.</div>
+          </div>
+        </section>
+
+        <!-- MODULE 3: DOSAGE & HEAT SINK SIMULATIONS -->
+        <section class="module-card">
+          <h3 class="module-title">Intratumoral Dosage &amp; Vascular Heat Sink Modeling (TIET MED)</h3>
+
+          <div class="tab-btn-row">
+            <button class="tab-btn active-tab" id="dosage-btn" onclick="switchDoseTab('injection')">1. Injection
+              Protocol</button>
+            <button class="tab-btn" id="heatsink-btn" onclick="switchDoseTab('sim')">2. Artery Simulation</button>
+            <button class="tab-btn" id="concl-btn" onclick="switchDoseTab('results')">3. Thermal Dosimetry
+              Results</button>
+          </div>
+
+          <!-- Tab 1: Injection Protocol -->
+          <div id="dose-tab-injection" class="scientific-fig-container">
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 1.5rem;">
+              <img class="scientific-fig-img" src="images/s2_poster_project_014_magnetic_hyperthermia__image19.png"
+                alt="Needle insertion model" style="width: 100%; height: 280px; object-fit: contain; border: 1px solid #E2E8F0; border-radius: 8px; background: #fff; padding: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05);" />
+              <img class="scientific-fig-img" src="images/s2_poster_project_014_magnetic_hyperthermia__image18.png"
+                alt="tumor size v/s injection position" style="width: 100%; height: 280px; object-fit: contain; border: 1px solid #E2E8F0; border-radius: 8px; background: #fff; padding: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05);" />
+              <img class="scientific-fig-img" src="images/dsai_ppt_image11.png" alt="Cell attachment dynamics" style="width: 100%; height: 280px; object-fit: contain; border: 1px solid #E2E8F0; border-radius: 8px; background: #fff; padding: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05);" />
+              <img class="scientific-fig-img" src="images/dsai_ppt_image15.jpeg"
+                alt="Physical breast tumor with mammary artery" style="width: 100%; height: 280px; object-fit: contain; border: 1px solid #E2E8F0; border-radius: 8px; background: #fff; padding: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05);" />
+            </div>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Model Volume (cm<sup>3</sup>)</th>
+                  <th>Constant Dose (mg/cm<sup>3</sup>)</th>
+                  <th>Reduced Dose (mg/cm<sup>3</sup>)</th>
+                  <th>CD MNP Mass (mg)</th>
+                  <th>RD MNP Mass (mg)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1st: 3.07</td>
+                  <td>5.0</td>
+                  <td>5.5</td>
+                  <td>15.35</td>
+                  <td>16.88</td>
+                </tr>
+                <tr>
+                  <td>2nd: 5.91</td>
+                  <td>5.0</td>
+                  <td>4.2</td>
+                  <td>29.55</td>
+                  <td>24.83</td>
+                </tr>
+                <tr>
+                  <td>3rd: 8.65</td>
+                  <td>5.0</td>
+                  <td>3.6</td>
+                  <td>43.25</td>
+                  <td>31.57</td>
+                </tr>
+                <tr>
+                  <td>4th: 12.02</td>
+                  <td>5.0</td>
+                  <td>3.2</td>
+                  <td>60.10</td>
+                  <td>38.46</td>
+                </tr>
+                <tr>
+                  <td>5th: 14.80</td>
+                  <td>5.0</td>
+                  <td>2.8</td>
+                  <td>74.00</td>
+                  <td>41.44</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="fig-label">Figure 3.1: Intratumoral Multi-point Infusion Protocol and Dosage Criteria</div>
+            <div class="fig-caption">Left: 3D physical model of tumor and healthy tissue boundary showing needle
+              injection. Center: MNP dispersion flow ($u$) and cell attachment model ($C_A = k_f C$). Right: Physical
+              patient-specific breast tumor, mammary artery, and tumor boundary alignment. The table shows MNP mass
+              infused under Constant Dose (CD) vs Reduced Dose (RD) protocols, confirming that the effective dose
+              ($g/cm^3$) drops by 50% as the tumor volume increases by 5 times.</div>
+          </div>
+
+          <!-- Tab 2: Artery Simulation -->
+          <div id="dose-tab-sim" class="scientific-fig-container" style="display: none;">
+            <img id="dose-sim-display" class="scientific-fig-img" src="dsai_ppt_image14.png"
+              alt="COMSOL 3D Temperature Heatmaps" />
+            <div class="fig-label" id="dose-sim-title">Figure 3.2: 3D Breast Heatmaps with Embedded Vascular Structures
+            </div>
+            <div class="fig-caption" id="dose-sim-caption">COMSOL simulation results showing regional temperature
+              distribution inside realistic breast geometries under diverse arterial flow configurations, evaluating
+              heat sink effects of the mammary artery and its vascular branches.</div>
+
+            <div class="gallery-row" style="margin-top: 1rem;">
+              <div class="gallery-img-wrap active-thumb" id="dose-sim-thumb-1"
+                onclick="updateDoseSimGallery('image12.png', '3D Breast Heatmaps with Embedded Vascular Structures', 'COMSOL simulation results showing regional temperature distribution inside realistic breast geometries under diverse arterial flow configurations, evaluating heat sink effects of the mammary artery and its vascular branches.')">
+                <img src="images/image12.png" style="width: 100%; height: 50px; object-fit: cover;"
+                  alt="Mammary Heatmap" />
+              </div>
+              <div class="gallery-img-wrap" id="dose-sim-thumb-2"
+                onclick="updateDoseSimGallery('dsai_ppt_image16.jpeg', 'Tetrahedral Computational Mesh Grids', 'Detailed computational volume discretization using 3D tetrahedral finite volume mesh grids of the breast geometry, tumor boundaries, and embedded mammary arterial branches.')">
+                <img src="images/dsai_ppt_image16.jpeg" style="width: 100%; height: 50px; object-fit: cover;"
+                  alt="Tetrahedral Mesh" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 3: Thermal Damage & Blood Flow Conclusions -->
+          <div id="dose-tab-results" class="scientific-fig-container" style="display: none;">
+            <div class="gallery-row" style="grid-template-columns: 1fr 1fr 1fr; gap: 0.4rem; margin-bottom: 1rem;">
+              <img class="scientific-fig-img" src="images/image16.jpeg" alt="Induction coils setup" />
+              <img class="scientific-fig-img" src="images/image17.jpeg" alt="Mice experimental response" />
+              <img class="scientific-fig-img" src="images/image18.png" alt="Clinical Patient Machine" />
+            </div>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Flow Condition</th>
+                  <th>Tumor Tissue Damage (%)</th>
+                  <th>Healthy Tissue Damage (%)</th>
+                  <th>Max Temperature T<sub>max</sub> (&deg;C)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>With Arterial Flow</td>
+                  <td>74.5%</td>
+                  <td>1.74%</td>
+                  <td>61.37&deg;C</td>
+                </tr>
+                <tr>
+                  <td>Without Arterial Flow</td>
+                  <td>90.1%</td>
+                  <td>1.78%</td>
+                  <td>65.00&deg;C</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="fig-label">Table 3.1: Vascular Heat Sink Effect Comparison</div>
+            <div class="fig-caption">Quantification of tissue thermal damage (Arrhenius damage parameter $\Omega \ge
+              4.6$) with and without blood flow. The arterial blood flow acts as a significant heat sink, dropping tumor
+              thermal damage by 15.6% during MNPH. Lab induction coils (left), in-vivo mouse tumor resolution over 30
+              days (center), and clinical hyperthermia portals (right) validate these bioheat transport simulations.
+            </div>
+          </div>
+        </section>
+
+        <!-- MODULE 4: ICL PROJECT -->
+        <section class="module-card">
+          <h3 class="module-title">Urban Airflow &amp; Environmental Pollution Modelling (TIET-Imperial College)</h3>
+
+          <div class="tab-btn-row">
+            <button class="tab-btn active-tab" onclick="switchIclTab('map')">1. 3D Campus Mesh</button>
+            <button class="tab-btn" onclick="switchIclTab('cfd')">2. CFD Flow &amp; AI4PDEs</button>
+            <button class="tab-btn" onclick="switchIclTab('val')">3. Validation</button>
+          </div>
+
+          <!-- Tab 1: 3D Campus Reconstructions -->
+          <div id="icl-tab-map" class="scientific-fig-container">
+            <img class="scientific-fig-img" src="images/work_package_1_28_4_26_image29.jpeg"
+              alt="Satellite Campus Overlay" />
+            <div class="gallery-row" style="margin-top: 0.5rem;">
+              <div class="gallery-img-wrap active-thumb" id="icl-thumb-1"
+                onclick="updateIclMap('work_package_1_28_4_26_image29.jpeg', '3D Satellite Mesh Reconstruction', 'Extruded building formations matching geographic footprints on the TIET campus overlay.')">
+                <img src="images/work_package_1_28_4_26_image29.jpeg"
+                  style="width: 100%; height: 50px; object-fit: cover;" alt="Satellite Overlay" />
+              </div>
+              <div class="gallery-img-wrap" id="icl-thumb-2"
+                onclick="updateIclMap('work_package_1_28_4_26_image32.png', '3D Solid Extruded Building Models', 'Clean solid geometry representing building heights for boundaries mesh generation.')">
+                <img src="images/work_package_1_28_4_26_image32.png"
+                  style="width: 100%; height: 50px; object-fit: cover;" alt="Solid Mesh" />
+              </div>
+              <div class="gallery-img-wrap" id="icl-thumb-3"
+                onclick="updateIclMap('work_package_1_28_4_26_image33.jpeg', '3D Wireframe Boundary Mesh', 'Boundary mesh wireframe layout used to initialize high-fidelity finite volume CFD solvers.')">
+                <img src="images/work_package_1_28_4_26_image33.jpeg"
+                  style="width: 100%; height: 50px; object-fit: cover;" alt="Wireframe Mesh" />
+              </div>
+            </div>
+            <div class="fig-label" id="icl-map-title">Figure 4.1: 3D Satellite Mesh Reconstruction</div>
+            <div class="fig-caption" id="icl-map-caption">Extruded building formations matching geographic footprints on
+              the TIET campus overlay.</div>
+          </div>
+
+          <!-- Tab 2: Flow Simulation & AI Comparisons -->
+          <div id="icl-tab-cfd" class="scientific-fig-container" style="display: none;">
+            <div class="gallery-row" style="grid-template-columns: 1.2fr 1fr; gap: 0.5rem;">
+              <img class="scientific-fig-img" src="images/work_package_1_28_4_26_image3.png"
+                alt="CFD vortex shedding" />
+              <img class="scientific-fig-img" src="images/work_package_1_28_4_26_image28.png"
+                alt="AI4PDEs comparison profiles" />
+            </div>
+            <div class="fig-label">Figure 4.2: Vortex Shedding Contours and AI4PDEs Velocity Validation</div>
+            <div class="fig-caption">Left: CFD contour plot showing transient Von K&aacute;rm&aacute;n vortex street
+              shedding past a circular cylinder. Right: Boundary velocity profiles comparing the developed AI4PDEs
+              neural solver (Solid Lines) against benchmark Gartling reference models (Black Dots) at channel widths of
+              x = 7m and x = 15m. Grid size: 1024 &times; 1024 &times; 128 (134,217,728 nodes) equivalent to 2 hours of
+              simulated urban flow.</div>
+          </div>
+
+          <!-- Tab 3: Simulation Validation -->
+          <div id="icl-tab-val" class="scientific-fig-container" style="display: none;">
+            <img class="scientific-fig-img" src="images/Val.png" alt="Validation Figure" />
+            <div class="fig-label">Figure 4.3: CFD Simulation Validation against Experimental Data</div>
+            <div class="fig-caption">Validation plots showing the correlation of the transient flow patterns and
+              pressure coefficients between computational fluid dynamics (CFD) model predictions and wind tunnel
+              experimental measurements, confirming high simulation accuracy.</div>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- RIGHT COLUMN: PUBLICATIONS, IMPACT & CONTACT -->
+      <aside class="right-column">
+
+        <div class="section-header-row" id="publications-section" style="margin-top: 0;">
+          <h2 class="section-label">Recent Publications &amp; Impact</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <!-- PUBLICATIONS CARD -->
+        <section class="module-card" style="padding: 0; border: none;">
+          <table class="publications-table">
+            <thead>
+              <tr>
+                <th style="width: 30%;">Doi</th>
+                <th style="width: 55%;">Publication</th>
+                <th style="width: 15%;">IF</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="pub-doi-link"><a href="https://doi.org/10.1016/j.tsep.2022.101396" target="_blank"
+                    rel="noopener">10.1016/j.tsep.101</a></td>
+                <td>Tumour position &amp; ambient conditions on MNP thermotherapy. <em>Therm. Sci. Eng. Progress</em>
+                </td>
+                <td>5.4</td>
+              </tr>
+              <tr>
+                <td class="pub-doi-link"><a href="https://doi.org/10.1002/cnm.70039" target="_blank"
+                    rel="noopener">10.1002/cnm.70039</a></td>
+                <td>Effect of arterial blood flow on MNP thermotherapy in a realistic breast tumour model. <em>Int. J.
+                    Numer. Meth. Biomed. Eng.</em></td>
+                <td>2.4</td>
+              </tr>
+              <tr>
+                <td class="pub-doi-link"><a href="https://doi.org/10.1016/j.medengphy.2023.104065" target="_blank"
+                    rel="noopener">10.1016/medeng.104</a></td>
+                <td>Tumour size-dependent MNP dose in realistic breast models. <em>Medical Engineering &amp;
+                    Physics</em></td>
+                <td>2.3</td>
+              </tr>
+              <tr>
+                <td class="pub-doi-link"><a href="https://doi.org/10.1016/j.jmmm.2022.170219" target="_blank"
+                    rel="noopener">10.1016/j.jmmm.170</a></td>
+                <td>SLP estimation via size-dependent magnetic properties. <em>J. Magn. Magn. Mater.</em></td>
+                <td>3.0</td>
+              </tr>
+              <tr>
+
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Core findings bullet points -->
+          <ul class="pub-bullet-list">
+            <li class="pub-bullet-item">Successful translation of high-fidelity MRI diagnostic boundaries directly into
+              finite volume bio-heat algorithms.</li>
+            <li class="pub-bullet-item">Demonstrated that size-dependent nanoparticle distribution optimization yields a
+              35% improvement in thermal delivery precision.</li>
+            <li class="pub-bullet-item">Pioneered machine learning surrogate PDE solvers (AI4PDEs) to speed up
+              calculation of localized tissue energy absorption levels by three orders of magnitude.</li>
+          </ul>
+        </section>
+
+        <!-- CONFERENCES & WORKSHOPS CARD -->
+        <div class="section-header-row" id="conferences-section" style="margin-top: 2rem;">
+          <h2 class="section-label">Conferences &amp; Workshops</h2>
+          <div class="section-line"></div>
+        </div>
+        <section class="module-card" style="padding: 0; border: none; margin-bottom: 2rem;">
+          <ul class="pub-bullet-list">
+            <li class="pub-bullet-item" style="margin-bottom: 1rem;"><strong>S. Nain, N. Kumar, and P. K. Avti. (2024).</strong> Oral paper presented in the "International Conference on Sustainable Development in Chemical and Environmental Engineering" (SDCEE-2024) in TIET, Patiala, India. Title: <em>"Computational evaluation of optimum tumor size-dependent MNP dose for realistic breast tumor models with different injection strategies in magnetic hyperthermia"</em>.</li>
+            <li class="pub-bullet-item"><strong>Faculty Development Program</strong> on "Computational Fluid Dynamics" at UIET, KUK, in collaboration with IIT Bombay.</li>
+          </ul>
+        </section>
+
+        <!-- RESEARCH TEAM & COLLABORATORS CARD -->
+        <section class="module-card">
+          <h3 class="module-title">Research Team &amp; Collaborators</h3>
+          <div class="team-container">
+<div class="team-grid-layout" style="display: flex; flex-direction: column; gap: 1rem;">
+  <div class="team-row-first" style="display: flex; justify-content: center;">
+    <button class="team-member-btn active-member sandeep" onclick="selectTeamMember('sandeep')" style="width: 100%; max-width: 200px;">
+      <img class="team-avatar-thumb" src="images/sandeep_nain.png" alt="Sandeep Nain" style="width: 80px; height: 80px;" />
+      <span class="team-member-name" style="font-size: 1.05rem;">Sandeep Nain</span>
+      <span class="team-member-role" style="font-size: 0.85rem;">Lead Researcher</span>
+    </button>
+  </div>
+  <div class="team-row-others" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem;">
+    <button class="team-member-btn" onclick="selectTeamMember('neeraj')">
+      <img class="team-avatar-thumb" src="images/neeraj_kumar.png" alt="Dr. Neeraj Kumar" style="width: 65px; height: 65px;" />
+      <span class="team-member-name" style="font-size: 0.95rem;">Dr. N. Kumar</span>
+      <span class="team-member-role" style="font-size: 0.8rem;">Professor, TIET</span>
+    </button>
+    <button class="team-member-btn" onclick="selectTeamMember('jainy')">
+      <img class="team-avatar-thumb" src="images/jainy_sachdewa.png" alt="Dr. Jainy Sachdewa" style="width: 65px; height: 65px;" />
+      <span class="team-member-name" style="font-size: 0.95rem;">Dr. J. Sachdewa</span>
+      <span class="team-member-role" style="font-size: 0.8rem;">Associate Prof.</span>
+    </button>
+    <button class="team-member-btn" onclick="selectTeamMember('pramod')">
+      <img class="team-avatar-thumb" src="images/pramod_avti.png" alt="Dr. Pramod Kumar Avti" style="width: 65px; height: 65px;" />
+      <span class="team-member-name" style="font-size: 0.95rem;">Dr. P. K. Avti</span>
+      <span class="team-member-role" style="font-size: 0.8rem;">Assistant Prof.</span>
+    </button>
+    <button class="team-member-btn" onclick="selectTeamMember('keshav')">
+      <img class="team-avatar-thumb" src="images/keshav_juneja.png" alt="Keshav Juneja" style="width: 65px; height: 65px;" />
+      <span class="team-member-name" style="font-size: 0.95rem;">Keshav Juneja</span>
+      <span class="team-member-role" style="font-size: 0.8rem;">Research Intern</span>
+    </button>
+  </div>
+</div>
+
+            <!-- Detail card that changes on click -->
+            <div class="team-detail-card" id="team-detail-display">
+              <img class="team-detail-avatar" id="team-detail-img" src="images/sandeep_nain.png" alt="Sandeep Nain" />
+              <div class="team-detail-info">
+                <div class="team-detail-name" id="team-detail-name">Sandeep Nain (Ph.D.)</div>
+                <div class="team-detail-title" id="team-detail-title">Lead Researcher &amp; Postdoctoral Fellow</div>
+                <div class="team-detail-text" id="team-detail-text">Specializes in computational fluid dynamics (CFD),
+                  multiphase flow transport, magnetic hyperthermia simulation, and developing boundary-aware attention
+                  networks (BEAT-Net) for medical image segmentation.</div>
+                <a id="team-detail-link" href="javascript:void(0)" onclick="openAboutModal()" style="font-size: 0.75rem; text-decoration: underline; margin-top: 0.4rem; display: inline-block; color: #0F4C81; font-weight: 600;">View Full Profile &amp; CV</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACT & PROFILE INTEGRATION CARD -->
+        <section class="contact-sidebar-block" id="reachout-section">
+          <div class="contact-header-banner">Contact</div>
+
+          <div class="contact-details-grid">
+            <div class="contact-row">
+              <span class="contact-icon">📍</span>
+              <a class="contact-val" href="https://www.google.com/maps/place/Directorate+Office/@30.3526804,76.3702691,19z/data=!4m9!1m2!2m1!1sDSAI,Block+A,+Thapar+Institute!3m5!1s0x391028aef1301f41:0x67ef8cddbb5b2486!8m2!3d30.3526804!4d76.37146!16s%2Fg%2F12622rcny?entry=ttu&g_ep=EgoyMDI2MDYyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" style="color: inherit; text-decoration: none;">
+                <strong>Location</strong>
+                CoE-DSAI, First floor directorate office, Thapar Institute, Patiala, Punjab, India
+              </a>
+            </div>
+            <div class="contact-row">
+              <span class="contact-icon">✉</span>
+              <span class="contact-val">
+                <strong>Email</strong>
+                <a href="mailto:sandeep_ps@thapar.edu">sandeep_ps@thapar.edu</a> / <a
+                  href="mailto:sandeepnain.kuk@gmail.com">sandeepnain.kuk@gmail.com</a>
+              </span>
+            </div>
+            <div class="contact-row">
+              <span class="contact-icon">📱</span>
+              <span class="contact-val">
+                <strong>Phone</strong>
+                +91 94167 03919
+              </span>
+            </div>
+            <div class="contact-row">
+              <span class="contact-icon">🔬</span>
+              <span class="contact-val">
+                <strong>ORCID</strong>
+                <a href="https://orcid.org/0000-0003-1802-6797" target="_blank" rel="noopener">0000-0003-1802-6797</a>
+              </span>
+            </div>
+          </div>
+
+          <div style="margin-top: 2rem; border-top: 1px solid #E2E8F0; padding-top: 1.5rem;">
+            <h4 style="font-size: 1.1rem; color: #1E293B; margin-bottom: 1rem; font-weight: 700;">Send a Message</h4>
+            <form action="mailto:sandeep_ps@thapar.edu" method="POST" enctype="text/plain" style="display: flex; flex-direction: column; gap: 1rem;">
+              <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid #CBD5E1; border-radius: 6px; font-family: inherit; font-size: 0.95rem; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--maroon)'" onblur="this.style.borderColor='#CBD5E1'" />
+              <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid #CBD5E1; border-radius: 6px; font-family: inherit; font-size: 0.95rem; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--maroon)'" onblur="this.style.borderColor='#CBD5E1'" />
+              <input type="text" name="subject" placeholder="Subject" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid #CBD5E1; border-radius: 6px; font-family: inherit; font-size: 0.95rem; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--maroon)'" onblur="this.style.borderColor='#CBD5E1'" />
+              <textarea name="message" placeholder="Your Message..." rows="4" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid #CBD5E1; border-radius: 6px; font-family: inherit; font-size: 0.95rem; outline: none; resize: vertical; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--maroon)'" onblur="this.style.borderColor='#CBD5E1'"></textarea>
+              <button type="submit" style="background: var(--maroon); color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 6px; font-weight: 600; font-size: 0.95rem; cursor: pointer; transition: background 0.2s, transform 0.1s; align-self: flex-start; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.background='#660000'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='var(--maroon)'; this.style.transform='none';">Send Message</button>
+            </form>
+          </div>
+
+        </section>
+
+      </aside>
+
+    </div>
+
+    <!-- FAQ SECTION -->
+    <div id="faq-section" style="margin-top: 3rem; padding: 2.5rem; background: var(--bg-card); border: 1px solid #CBD5E1; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.06);">
+      <div class="section-header-row" style="margin-top: 0; text-align: left; align-items: flex-start;">
+        <h2 class="section-label">Frequently Asked Questions</h2>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 1rem;">
+        <div style="border-bottom: 1px solid #E2E8F0; padding-bottom: 1rem;">
+          <h4 style="color: #1E293B; margin-bottom: 0.5rem; font-size: 1.1rem;">What is your primary research focus?</h4>
+          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; margin: 0;">My research primarily focuses on computational fluid dynamics (CFD), biophysics, and AI-driven modeling for breast cancer detection and magnetic hyperthermia treatment.</p>
+        </div>
+        <div style="border-bottom: 1px solid #E2E8F0; padding-bottom: 1rem;">
+          <h4 style="color: #1E293B; margin-bottom: 0.5rem; font-size: 1.1rem;">Are you open to academic collaborations?</h4>
+          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; margin: 0;">Absolutely. I actively collaborate with institutions like Imperial College London, Virginia Tech, and PGIMER Chandigarh. Feel free to reach out via the Contact section to discuss potential projects.</p>
+        </div>
+        <div style="padding-bottom: 0.5rem;">
+          <h4 style="color: #1E293B; margin-bottom: 0.5rem; font-size: 1.1rem;">Where can I find your latest publications?</h4>
+          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; margin: 0;">You can find my latest peer-reviewed articles in the "Recent Publications & Impact" section on this page, or by visiting my Google Scholar and ORCID profiles linked below.</p>
+        </div>
+      </div>
+    </div>
+
+  <!-- ABOUT MODAL -->
+  <div id="about-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-content">
+      <button class="modal-close-btn" onclick="closeAboutModal()">&times;</button>
+      
+      <!-- Styled CV Card (Inspired by reference image) -->
+      <div class="cv-card">
+        <!-- Top Section -->
+        <div class="cv-header">
+          <div class="cv-profile-left">
+            <h2 class="cv-name">Sandeep Nain (Ph.D.)</h2>
+            <div class="cv-title">Research Associate &amp; Postdoctoral Fellow</div>
+            
+            <div class="cv-contact-info">
+              <div><strong>Phone:</strong> +91 94167 03919</div>
+              <div><strong>E-mail:</strong> <a href="mailto:sandeep_ps@thapar.edu">sandeep_ps@thapar.edu</a> / <a href="mailto:sandeepnain.kuk@gmail.com">sandeepnain.kuk@gmail.com</a></div>
+              <div><strong>Location:</strong> CoE-DSAI, First floor directorate office, Thapar Institute, Patiala, Punjab, India</div>
+            </div>
+            
+            <div class="cv-profile-links">
+              <a href="https://scholar.google.com/citations?user=sandeepnain" target="_blank">Google Scholar</a> | 
+              <a href="https://orcid.org/0000-0003-1802-6797" target="_blank">ORCID Profile</a> | 
+              <a href="https://www.researchgate.net/profile/sandeep-Nain" target="_blank">ResearchGate</a> | 
+              <a href="https://www.linkedin.com/in/sandeep-nain-ph-d-28406813a" target="_blank">LinkedIn</a>
+            </div>
+          </div>
+          <div class="cv-profile-right">
+            <img class="cv-avatar" src="images/sandeep_nain.png" alt="Sandeep Nain" />
+          </div>
+        </div>
+        
+        <hr class="cv-divider" />
+        
+        <!-- Summary Block -->
+        <div class="cv-positions-block">
+          <h3 class="cv-section-title-center">Current Research Focus</h3>
+          <p>Research Associate at the Center of Excellence in Data Science and Artificial Intelligence (CoE-DSAI) focused on <strong>AI-Driven modeling, segmentation, and optimization of breast cancer detection and treatment</strong> through magnetically induced hyperthermia therapy, and environmental pollution modeling.</p>
+        </div>
+        
+        <hr class="cv-divider" />
+        
+        <!-- Two Column CV Details -->
+        <div class="cv-details-grid">
+          <!-- Left Column -->
+          <div class="cv-column">
+            <div class="cv-block">
+              <h4 class="cv-block-title">Research Interests</h4>
+              <ul class="cv-list">
+                <li>Thermo-fluid transport processes in biological systems</li>
+                <li>Biophysics and targeted biomedical cancer therapies</li>
+                <li>Computational Fluid Dynamics (CFD) and numerical simulation</li>
+                <li>Modelling of biological flows based on morphology and hemodynamics</li>
+                <li>AI-driven cancer detection and medical image segmentation</li>
+              </ul>
+            </div>
+            
+            <div class="cv-block">
+              <h4 class="cv-block-title">Academic Background</h4>
+              <ul class="cv-list">
+                <li><strong>Post Doctorate (Data Science &amp; AI)</strong>, CoE-DSAI, TIET-UQ (2025 - Present)</li>
+                <li><strong>Doctor of Philosophy in Mechanical Engineering</strong>, Thapar Institute (2018 - 2024)</li>
+                <li><strong>M.Tech. in Thermal Engineering</strong>, UIET, Kurukshetra University (2015 - 2017)</li>
+                <li><strong>B.Tech. in Mechanical Engineering</strong>, Chaudhary Devilal University (2008 - 2011)</li>
+                <li><strong>Diploma in Mechanical Engineering</strong>, Government Polytechnic Hisar (2005 - 2008)</li>
+              </ul>
+            </div>
+            
+            <div class="cv-block">
+              <h4 class="cv-block-title">Achievements &amp; Honors</h4>
+              <ul class="cv-list">
+                <li>Funded JRF &amp; SRF Fellowship, CEEMS, TIET-VT (2021-2024)</li>
+                <li>Funded Doctoral Research Fellowship, MED, TIET (2018-2021)</li>
+                <li>Fellowship during M.Tech from AICTE, India</li>
+                <li>Graduate Aptitude Test of Engineering (GATE) Qualified</li>
+                <li>Gold medal in Discus throw in Thapar Institute Olympic games</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Right Column -->
+          <div class="cv-column">
+            <div class="cv-block">
+              <h4 class="cv-block-title">Professional Experience</h4>
+              <ul class="cv-list">
+                <li><strong>Research Associate</strong>, CoE-DSAI, TIET-UQ joint project (2025 - Present)</li>
+                <li><strong>Senior Research Fellow (SRF)</strong>, CEEMS, TIET-VT (2023 - 2024)</li>
+                <li><strong>Junior Research Fellow (JRF)</strong>, CEEMS, TIET-VT (2021 - 2023)</li>
+                <li><strong>Teaching Associate</strong>, MED, Thapar Institute (2018 - 2021)</li>
+                <li><strong>Lecturer</strong>, Karnal Institute of Tech. &amp; Management (2012 - 2013)</li>
+              </ul>
+            </div>
+            
+            <div class="cv-block">
+              <h4 class="cv-block-title">Teaching</h4>
+              <ul class="cv-list">
+                <li>Delivered courses: Engineering Drawing, Machine Drawing, AutoCAD</li>
+                <li>Managed labs: Kinematics of Machines, Fluid Machines, IC Engines, Heat &amp; Mass Transfer, RAC, Automobile Engineering</li>
+              </ul>
+            </div>
+            
+            <div class="cv-block">
+              <h4 class="cv-block-title">Software &amp; Programming</h4>
+              <ul class="cv-list">
+                <li><strong>CFD/Physics:</strong> COMSOL Multiphysics, ANSYS Fluent</li>
+                <li><strong>CAD/Grid:</strong> SolidWorks, AutoCAD, G-Mesh, Origin</li>
+                <li><strong>Languages:</strong> MATLAB, Python, Fortran, C++, R, ML basics</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KESHAV MODAL -->
+  <div id="keshav-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-content">
+      <button class="modal-close-btn" onclick="closeKeshavModal()">&times;</button>
+      
+      <!-- Styled CV Card -->
+      <div class="cv-card">
+        <!-- Top Section -->
+        <div class="cv-header">
+          <div class="cv-profile-left">
+            <h2 class="cv-name">Keshav Juneja</h2>
+            <div class="cv-title">Research Intern</div>
+            
+            <div class="cv-contact-info">
+              <div><strong>Phone:</strong> +91 88724 44018</div>
+              <div><strong>E-mail:</strong> <a href="mailto:kjuneja_be24@thapar.edu">kjuneja_be24@thapar.edu</a></div>
+              <div><strong>Location:</strong> Thapar Institute of Engineering and Technology, Patiala, Punjab, India</div>
+            </div>
+            
+            <div class="cv-profile-links">
+              <a href="https://github.com/Keshavj-13" target="_blank">GitHub Profile</a> | 
+              <a href="https://linkedin.com/in/keshav-juneja" target="_blank">LinkedIn</a>
+            </div>
+          </div>
+          <div class="cv-profile-right">
+            <img class="cv-avatar" src="images/keshav_juneja.png" alt="Keshav Juneja" />
+          </div>
+        </div>
+        
+        <hr class="cv-divider" />
+        
+        <!-- Summary Block -->
+        <div class="cv-positions-block">
+          <h3 class="cv-section-title-center">Current Research Focus</h3>
+          <p>Bachelor of Engineering student in Computer Engineering (CGPA: 8.49) at Thapar Institute, specializing in building configuration-driven training pipelines for CNN-based PDE surrogate models, packaging 3D breast cancer segmentation architectures, and optimizing distributed job runs on institutional HPC clusters.</p>
+        </div>
+        
+        <hr class="cv-divider" />
+        
+        <!-- Two Column CV Details -->
+        <div class="cv-details-grid">
+          <!-- Left Column -->
+          <div class="cv-column">
+            <div class="cv-block">
+              <h4 class="cv-block-title">Academic Background</h4>
+              <ul class="cv-list">
+                <li><strong>Bachelor of Engineering (Computer Engineering)</strong>, Thapar Institute (Expected May 2028) | CGPA: 8.49</li>
+              </ul>
+            </div>
+            
+            <div class="cv-block">
+              <h4 class="cv-block-title">Achievements</h4>
+              <ul class="cv-list">
+                <li><strong>HackTU 6.0 MLH Hackathon Winner (2025)</strong> — Secured first place among 300+ participants</li>
+                <li>Solved 160+ algorithmic problems on LeetCode in C++, focused on dynamic programming, graphs, and binary search</li>
+              </ul>
+            </div>
+
+            <div class="cv-block">
+              <h4 class="cv-block-title">Selected Projects</h4>
+              <ul class="cv-list">
+                <li><strong>AxiomCloud — AutoML Platform:</strong> Built FastAPI + Next.js 14 AutoML platform supporting 9 algorithms with Optuna tuning, SHAP/LIME explainability, and Dockerization.</li>
+                <li><strong>Battery Thermal Management — RL Controller:</strong> Co-authored a manuscript submitted to Nature Communications. Built a GraphSAGE+LSTM+PPO policy controller showing 53% cooling energy reduction.</li>
+                <li><strong>TradeAssist — Quantitative Research Platform:</strong> Extensible Python research platform for NSE equities computing indicators with risk budgeting and reinforcement learning policy.</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Right Column -->
+          <div class="cv-column">
+            <div class="cv-block">
+              <h4 class="cv-block-title">Professional Experience</h4>
+              <ul class="cv-list">
+                <li><strong>Research Intern</strong>, Thapar Institute (Jan 2025 - Present)
+                  <ul>
+                    <li>Built configuration-driven training pipelines for CNN-based PDE surrogate models (TIET-Imperial College London partnership)</li>
+                    <li>Packaged and validated published 3D breast cancer segmentation architectures on institutional HPC clusters (TIET-UQ joint project)</li>
+                    <li>Refactored multi-GPU synchronization logic, reducing distributed job restart overhead by ~40% and improving observability</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="cv-block">
+              <h4 class="cv-block-title">Technical Skills</h4>
+              <ul class="cv-list">
+                <li><strong>Languages:</strong> C++, Python, Java, SQL, Bash</li>
+                <li><strong>Frameworks:</strong> FastAPI, Next.js 14, PyTorch, scikit-learn, XGBoost, LightGBM</li>
+                <li><strong>ML / Data:</strong> NumPy, pandas, Optuna, SHAP, LIME, HDF5</li>
+                <li><strong>Tools:</strong> Git, Docker, Linux, Slurm, Firebase</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- METHODOLOGY MODAL -->
+  <div id="methodology-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-content" style="max-width: 650px; padding: 2.5rem;">
+      <button class="modal-close-btn" onclick="closeMethodologyModal()">&times;</button>
+      <h2 id="methodology-modal-title" style="margin-bottom: 1.5rem; color: #1E293B; font-size: 1.6rem; text-align: center;"></h2>
+      <div id="methodology-modal-images"></div>
+      <p id="methodology-modal-desc" style="font-size: 1.05rem; color: #475569; line-height: 1.7; text-align: justify;"></p>
+    </div>
+  </div>
+
+  <!-- COLLABORATION MODAL -->
+  <div id="collaboration-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-content" style="max-width: 1100px; padding: 3rem;">
+      <button class="modal-close-btn" onclick="closeCollaborationModal()">&times;</button>
+      <h2 style="margin-bottom: 2.5rem; color: #1E293B; font-size: 2.2rem; text-align: center;">Our Collaborators</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; text-align: center;">
+        
+        <div onclick="window.open('https://pgimer.edu.in/', '_blank')" style="cursor: pointer; color: inherit; display: flex; flex-direction: column; align-items: center; border: 1px solid #E2E8F0; border-radius: 8px; padding: 2rem; transition: transform 0.2s, box-shadow 0.2s; background: #fff;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 15px -3px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='none'; this.style.boxShadow='none';">
+          <img src="images/pgimer_uploaded.jpg" style="height: 200px; object-fit: contain; margin-bottom: 1.5rem;" alt="PGIMER Chandigarh" />
+          <h4 style="font-size: 1.2rem; color: var(--maroon); margin-bottom: 0.5rem;">PGIMER</h4>
+          <p style="font-size: 1rem; color: var(--text-muted); margin-bottom: 1rem;">Chandigarh, India</p>
+          <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid #E2E8F0; width: 100%; display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+            <img src="images/dr_pramod_avti.png" alt="Dr. Pramod Kumar Avti" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 2px solid var(--maroon); box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+            <a href="https://pgimer.edu.in/PGIMER_PORTAL/PGIMERPORTAL/Department/Global/JSP/empview.jsp?id=1041" target="_blank" onclick="event.stopPropagation()" style="font-size: 1.1rem; color: var(--maroon); font-weight: bold; margin: 0; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Dr. Pramod Kumar Avti</a>
+          </div>
+        </div>
+
+        <div onclick="window.open('https://www.dmch.edu/', '_blank')" style="cursor: pointer; color: inherit; display: flex; flex-direction: column; align-items: center; border: 1px solid #E2E8F0; border-radius: 8px; padding: 2rem; transition: transform 0.2s, box-shadow 0.2s; background: #fff;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 15px -3px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='none'; this.style.boxShadow='none';">
+          <img src="images/dmc_uploaded.jpg" style="height: 200px; object-fit: contain; margin-bottom: 1.5rem;" alt="DMC Ludhiana" />
+          <h4 style="font-size: 1.2rem; color: var(--maroon); margin-bottom: 0.5rem;">Dayanand Medical College &amp; Hospital</h4>
+          <p style="font-size: 1rem; color: var(--text-muted); margin-bottom: 1rem;">Ludhiana, Punjab</p>
+          <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid #E2E8F0; width: 100%; display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+            <img src="images/dr_kamini_gupta.png" alt="Dr. Kamini Gupta" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 2px solid var(--maroon); box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+            <a href="https://dmch.edu/doctor/kamini-gupta-pmc-31504" target="_blank" onclick="event.stopPropagation()" style="font-size: 1.1rem; color: var(--maroon); font-weight: bold; margin: 0; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Dr. Kamini Gupta</a>
+          </div>
+        </div>
+
+        <div onclick="window.open('https://gmcpatiala.in/', '_blank')" style="cursor: pointer; color: inherit; display: flex; flex-direction: column; align-items: center; border: 1px solid #E2E8F0; border-radius: 8px; padding: 2rem; transition: transform 0.2s, box-shadow 0.2s; background: #fff;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 15px -3px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='none'; this.style.boxShadow='none';">
+          <img src="images/gmc_uploaded.jpg" style="height: 200px; object-fit: contain; margin-bottom: 1.5rem;" alt="Rajindra Hospital Patiala" />
+          <h4 style="font-size: 1.2rem; color: var(--maroon); margin-bottom: 0.5rem;">Government Medical College &amp; Rajindra Hospital</h4>
+          <p style="font-size: 1rem; color: var(--text-muted); margin-bottom: 1rem;">Patiala, Punjab</p>
+          <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid #E2E8F0; width: 100%; display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+            <img src="images/dr_rps_banipal.png" alt="Dr. RPS Banipall" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 2px solid var(--maroon); box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+            <a href="https://scholar.google.com/citations?user=FiyjFYcAAAAJ&hl=en" target="_blank" onclick="event.stopPropagation()" style="font-size: 1.1rem; color: var(--maroon); font-weight: bold; margin: 0; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Dr. RPS Banipall</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- HIGHLIGHT MODAL -->
+  <div id="highlight-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-content" style="max-width: 900px; padding: 2.5rem; background: var(--bg-card);">
+      <button class="modal-close-btn" onclick="closeHighlightModal()">&times;</button>
+      <h2 id="highlight-modal-title" style="margin-bottom: 1.5rem; color: #1E293B; font-size: 1.6rem; text-align: center;"></h2>
+      <div id="highlight-modal-body" style="display: flex; justify-content: center; align-items: center; width: 100%;"></div>
+    </div>
+  </div>
+
+  <script src="js/main.js?v=17"></script>
+</body>
+
+</html>
