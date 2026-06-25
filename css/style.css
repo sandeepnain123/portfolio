@@ -955,3 +955,73 @@ a:hover {
   background: #f8f9fa;
   margin: 0;
 }
+
+/* ==========================================================================
+   RESPONSIVE MOBILE LAYOUT
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .poster-main-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .poster-container {
+    padding: 1.5rem;
+  }
+  .contact-details-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .poster-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .header-nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .stats-grid,
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery-row,
+  .methodology-row-2,
+  .collaboration-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .gallery-img-wrap,
+  .scientific-fig-img,
+  .methodology-img {
+    width: 100%;
+    height: auto;
+  }
+  .research-title {
+    font-size: 2rem;
+  }
+  table.data-table, 
+  table.publications-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  .author-name {
+    font-size: 1.3rem;
+  }
+  body {
+    padding: 0.5rem;
+  }
+  .poster-container {
+    padding: 1rem;
+  }
+}
