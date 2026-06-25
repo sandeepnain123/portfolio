@@ -1026,12 +1026,13 @@ a:hover {
 
   .stats-grid,
   .skills-grid,
-  .cv-details-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .team-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .cv-details-grid,
+  .team-grid,
+  .methodology-grid,
+  .cfd-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
   }
 
   .gallery-row,
@@ -1047,6 +1048,7 @@ a:hover {
   .scientific-fig-img,
   .methodology-img,
   .module-card,
+  .highlight-card,
   .scientific-fig-container {
     width: 100% !important;
     max-width: 100% !important;
@@ -1066,12 +1068,6 @@ a:hover {
 }
 
 @media (max-width: 480px) {
-  .stats-grid,
-  .skills-grid,
-  .team-grid,
-  .cv-details-grid {
-    grid-template-columns: 1fr;
-  }
   .author-name {
     font-size: 1.3rem;
   }
