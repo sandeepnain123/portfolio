@@ -973,64 +973,102 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-  /* Force text wrapping to prevent horizontal scrolling */
-  * {
+  /* Bulletproof global overflow fixes */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  *, *::before, *::after {
     word-break: break-word;
     overflow-wrap: break-word;
+    box-sizing: border-box;
   }
   
-  /* Prevent images/videos from overflowing their containers */
+  /* Prevent images/videos from overflowing */
   img, svg, video {
     max-width: 100% !important;
-    height: auto;
+    height: auto !important;
   }
 
   /* Fix dropdown min-width causing overflow */
   .dropdown-content {
     min-width: 200px;
+    width: auto;
     right: 0;
   }
 
-  .poster-header {
+  /* Fix navigation and sub-section tabs overflowing */
+  .poster-header, .header-brand {
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
   }
+  
   .header-nav {
     flex-wrap: wrap;
     gap: 1rem;
+    width: 100%;
   }
+  
+  .tab-btn-row {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .tab-btn {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
   .stats-grid,
-  .skills-grid {
+  .skills-grid,
+  .cv-details-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .gallery-row,
   .methodology-row-2,
   .collaboration-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+    width: 100%;
   }
+  
   .gallery-img-wrap,
   .scientific-fig-img,
-  .methodology-img {
-    width: 100%;
-    height: auto;
+  .methodology-img,
+  .module-card,
+  .scientific-fig-container {
+    width: 100% !important;
+    max-width: 100% !important;
   }
+  
   .research-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
+  
   table.data-table, 
   table.publications-table {
     display: block;
     overflow-x: auto;
     white-space: nowrap;
+    width: 100%;
   }
 }
 
 @media (max-width: 480px) {
   .stats-grid,
-  .skills-grid {
+  .skills-grid,
+  .team-grid,
+  .cv-details-grid {
     grid-template-columns: 1fr;
   }
   .author-name {
