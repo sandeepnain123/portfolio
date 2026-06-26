@@ -239,6 +239,13 @@ function selectTeamMember(memberId) {
       title: "Research Intern",
       img: "images/keshav_juneja.png",
       text: "Bachelor of Engineering student in Computer Engineering at Thapar Institute. Built configuration-driven training pipelines for CNN-based PDE surrogate models (Imperial College London) and packaged 3D breast cancer segmentation architectures on institutional HPC clusters (University of Queensland)."
+    },
+    sudhar: {
+      name: "Sudhar Raja Gopalan",
+      title: "Relytech Reliability Solutions Pvt Ltd",
+      img: "images/sudhar_raja.jpg",
+      text: "Collaborator and industry expert from Relytech Reliability Solutions Pvt Ltd.",
+      link: "https://scholar.google.com/citations?user=-yOyVk0AAAAJ&hl=en"
     }
   };
 
@@ -279,6 +286,12 @@ function selectTeamMember(memberId) {
       linkEl.href = "https://pgimer.edu.in/PGIMER_PORTAL/PGIMERPORTAL/Department/Global/JSP/empview.jsp?id=1041";
       linkEl.removeAttribute('onclick');
       linkEl.textContent = "Institute Faculty Profile";
+      linkEl.style.display = "inline-block";
+    } else if (data.link) {
+      linkEl.href = data.link;
+      linkEl.removeAttribute('onclick');
+      linkEl.textContent = "View Scholar Profile";
+      linkEl.target = "_blank";
       linkEl.style.display = "inline-block";
     } else {
       linkEl.style.display = "none";
