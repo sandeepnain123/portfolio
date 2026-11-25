@@ -838,6 +838,7 @@
             <button class="tab-btn active-tab" onclick="switchIclTab('map')">1. 3D Campus Mesh</button>
             <button class="tab-btn" onclick="switchIclTab('cfd')">2. CFD Flow &amp; AI4PDEs</button>
             <button class="tab-btn" onclick="switchIclTab('val')">3. Validation</button>
+            <button class="tab-btn" onclick="switchIclTab('gpu')">4. GPU Solver (30&times;)</button>
           </div>
 
           <!-- Tab 1: 3D Campus Reconstructions -->
@@ -889,6 +890,25 @@
             <div class="fig-caption">Validation plots showing the correlation of the transient flow patterns and
               pressure coefficients between computational fluid dynamics (CFD) model predictions and wind tunnel
               experimental measurements, confirming high simulation accuracy.</div>
+          </div>
+
+          <!-- Tab 4: CUDA-Optim GPU solver -->
+          <div id="icl-tab-gpu" class="scientific-fig-container" style="display: none;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.6rem;">
+              <img class="scientific-fig-img" src="images/cuda_optim_sphere_flow.gif" loading="lazy"
+                alt="Animated flow past a 3D sphere over 30,000 time steps on 8.39 million cells" style="width: 100%; border-radius: 6px;" />
+              <img class="scientific-fig-img" src="images/cuda_optim_speedup.gif" loading="lazy"
+                alt="Per-step latency falling from 533.5 ms (PyTorch) to 17.7 ms (CUDA Graph tier)" style="width: 100%; border-radius: 6px;" />
+              <img class="scientific-fig-img" src="images/cuda_optim_streamlines.jpg" loading="lazy"
+                alt="Velocity streamlines around the sphere at step 30,000" style="width: 100%; background: #fff; border-radius: 6px;" />
+              <img class="scientific-fig-img" src="images/cuda_optim_centerline.jpg" loading="lazy"
+                alt="Centerline velocity: CUDA solver vs PyTorch reference" style="width: 100%; background: #fff; border-radius: 6px;" />
+            </div>
+            <div class="fig-label">Figure 4.4: CUDA-Optim — 30&times; Faster GPU Navier&ndash;Stokes Solver</div>
+            <div class="fig-caption">The AI4PDEs solver rewritten as fused C++/CUDA kernels with an 8-level multigrid and
+              CUDA Graph replay. Flow past a 3D sphere on 8.39M cells (512&times;128&times;128): 533.5&nbsp;&rarr;&nbsp;17.7&nbsp;ms
+              per step on an NVIDIA A100, so a 30,000-step run drops from 4.5&nbsp;hours to 9&nbsp;minutes. Bottom: streamlines
+              at step 30,000 and the centerline velocity against the original PyTorch solver.</div>
           </div>
         </section>
 
