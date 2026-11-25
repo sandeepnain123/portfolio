@@ -1086,3 +1086,17 @@ a:hover {
     box-shadow: none;
   }
 }
+
+/* Case selector chips (end-to-end hyperthermia module) */
+.case-chip-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.8rem; }
+.case-chip {
+  font: inherit; font-size: 0.8rem; font-weight: 600; cursor: pointer;
+  padding: 0.35rem 0.7rem; border-radius: 999px;
+  border: 1px solid #CBD5E1; background: #fff; color: #1E293B;
+  display: inline-flex; align-items: center; gap: 0.4rem;
+}
+.case-chip span { font-weight: 500; color: #64748B; font-size: 0.72rem; }
+.case-chip:hover { border-color: #0F4C81; }
+.case-chip:focus-visible { outline: 2px solid #0F4C81; outline-offset: 2px; }
+.case-chip.active-chip { background: #0F4C81; border-color: #0F4C81; color: #fff; }
+.case-chip.active-chip span { color: #DBEAFE; }

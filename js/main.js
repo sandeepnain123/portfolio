@@ -477,3 +477,18 @@ function openHighlightModal(element) {
 }
 
 
+
+/**
+ * Yunnan case selector in the end-to-end hyperthermia module (tab 1)
+ */
+function selectMnphCase(caseId) {
+  var bn = document.getElementById('mnph-case-beatnet');
+  var tree = document.getElementById('mnph-case-tree');
+  var label = document.getElementById('mnph-case-label');
+  if (bn) { bn.src = 'images/mnph_case' + caseId + '_beatnet.jpg'; bn.alt = 'BEAT-Net tumor segmentation vs ground truth, case ' + caseId; }
+  if (tree) { tree.src = 'images/mnph_case' + caseId + '_tree.jpg'; tree.alt = 'Peritumoral vessel tree, case ' + caseId; }
+  if (label) label.textContent = caseId;
+  document.querySelectorAll('#mnph-tab-detect .case-chip').forEach(function(chip) {
+    chip.classList.toggle('active-chip', (chip.getAttribute('onclick') || '').indexOf("'" + caseId + "'") !== -1);
+  });
+}

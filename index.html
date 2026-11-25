@@ -729,7 +729,7 @@
             treatment simulation, built on our MEP 2023 reduced-dose protocol and IJNMBE 2025 arterial-flow model and
             moved from COMSOL to our own GPU solvers. The BEAT-Net tumor mask (not the ground truth) drives every
             downstream step. Five Yunnan cases (01, 03, 04, 05, 06; 896&times;896&times;120 voxels,
-            0.38&times;0.38&times;1.7&nbsp;mm, 5 contrast phases). Figures show case 03.
+            0.38&times;0.38&times;1.7&nbsp;mm, 5 contrast phases). Pick a case in tab 1; the other tabs show case 03.
           </p>
 
           <div class="tab-btn-row" id="mnph-btn-row">
@@ -741,19 +741,27 @@
 
           <!-- Tab 1: Detection + vessels -->
           <div id="mnph-tab-detect" class="scientific-fig-container">
-            <img class="scientific-fig-img" src="images/mnph_e2e_beatnet_case03.jpg"
+            <div class="case-chip-row" role="group" aria-label="Choose a Yunnan case">
+              <button class="case-chip" onclick="selectMnphCase('01')">Case 01 <span>Dice 95.0%</span></button>
+              <button class="case-chip active-chip" onclick="selectMnphCase('03')">Case 03 <span>Dice 76.7%</span></button>
+              <button class="case-chip" onclick="selectMnphCase('04')">Case 04 <span>Dice 88.9%</span></button>
+              <button class="case-chip" onclick="selectMnphCase('05')">Case 05 <span>Dice 72.6%</span></button>
+              <button class="case-chip" onclick="selectMnphCase('06')">Case 06 <span>Dice 90.1%</span></button>
+            </div>
+            <img class="scientific-fig-img" id="mnph-case-beatnet" src="images/mnph_case03_beatnet.jpg"
               alt="BEAT-Net tumor segmentation vs ground truth, case 03" loading="lazy" />
-            <div class="fig-label">Figure 3.3: BEAT-Net Tumor Detection on DCE-MRI (Case 03)</div>
+            <div class="fig-label">Figure 3.3: BEAT-Net Tumor Detection on DCE-MRI (Case <span id="mnph-case-label">03</span>)</div>
             <div class="fig-caption">3D FlexibleUNet (ResNet-50 encoder, scSE attention) on stacked phases P1&ndash;P5.
               Blue = ground truth, red = BEAT-Net. Dice across the five cases: 95.0 / 76.7 / 88.9 / 72.6 / 90.1&nbsp;%.
               These cases overlap the model's training split, so the Dice values are not external-test performance.</div>
-            <img class="scientific-fig-img" src="images/mnph_e2e_vessel_tree_case03.jpg" style="margin-top: 1rem;"
+            <img class="scientific-fig-img" id="mnph-case-tree" src="images/mnph_case03_tree.jpg" style="margin-top: 1rem;"
               alt="Peritumoral vessel tree, case 03" loading="lazy" />
-            <div class="fig-label">Figure 3.4: Peritumoral Vessel Tree Reconstruction</div>
+            <div class="fig-label">Figure 3.4: Peritumoral Vessel Tree Reconstruction (networks &ge; 50&nbsp;mm used for flow)</div>
             <div class="fig-caption">Early subtraction (P2&minus;P1), white top-hat, multiscale Jerman vesselness on
               GPU, hysteresis, skeleton graph, gap bridging and minimal-path tracking, then per-branch validation (CNR,
               FWHM diameter, length, tortuosity). Line width and colour show vessel diameter (1.4&ndash;3.8&nbsp;mm).
-              Vessels below ~1.5&nbsp;mm cannot be recovered from 1.7&nbsp;mm slices.</div>
+              Vessels below ~1.5&nbsp;mm cannot be recovered from 1.7&nbsp;mm slices. In cases 05 and 06 most of the
+              reconstructed length sits in networks shorter than 50&nbsp;mm, so few vessels remain for the flow model.</div>
           </div>
 
           <!-- Tab 2: Flow -->
