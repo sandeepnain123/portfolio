@@ -21,32 +21,31 @@ function scrollToSection(sectionId) {
   }
 }
 
-/**
- * Tab switcher for Breast Segmentation Model Section
- */
-function switchSegTab(tabId) {
-  // Hide all segmentation tabs
-  document.getElementById('seg-tab-mri').style.display = 'none';
-  document.getElementById('seg-tab-arch').style.display = 'none';
-  document.getElementById('seg-tab-out').style.display = 'none';
-  document.getElementById('seg-tab-ablation').style.display = 'none';
-  
-  // Show active tab
-  document.getElementById('seg-tab-' + tabId).style.display = 'block';
 
-  // Toggle button active classes
-  var segBtnRow = document.querySelectorAll('.tab-btn-row')[0];
-  if (segBtnRow) {
-    var btns = segBtnRow.querySelectorAll('.tab-btn');
-    btns.forEach(function(btn, index) {
-      btn.classList.remove('active-tab');
-      if (tabId === 'mri' && index === 0) btn.classList.add('active-tab');
-      if (tabId === 'arch' && index === 1) btn.classList.add('active-tab');
-      if (tabId === 'out' && index === 2) btn.classList.add('active-tab');
-      if (tabId === 'ablation' && index === 3) btn.classList.add('active-tab');
-    });
-  }
+/**
+ * Generic tab switcher. Shows <prefix>-tab-<tabId>, hides its sibling panels,
+ * and highlights the matching button inside the same section. Buttons are
+ * matched by the tab id in their onclick, never by position on the page,
+ * so adding or reordering modules cannot break other modules' tabs.
+ */
+function switchModuleTab(prefix, tabId) {
+  var target = document.getElementById(prefix + '-tab-' + tabId);
+  if (!target) return;
+  var section = target.closest('section') || document;
+  section.querySelectorAll('[id^="' + prefix + '-tab-"]').forEach(function(panel) {
+    panel.style.display = (panel === target) ? 'block' : 'none';
+  });
+  section.querySelectorAll('.tab-btn-row .tab-btn').forEach(function(btn) {
+    var oc = btn.getAttribute('onclick') || '';
+    btn.classList.toggle('active-tab', oc.indexOf("'" + tabId + "'") !== -1);
+  });
 }
+
+function switchSegTab(tabId) { switchModuleTab('seg', tabId); }
+function switchHypTab(tabId) { switchModuleTab('hyp', tabId); }
+function switchDoseTab(tabId) { switchModuleTab('dose', tabId); }
+function switchMnphTab(tabId) { switchModuleTab('mnph', tabId); }
+function switchIclTab(tabId) { switchModuleTab('icl', tabId); }
 
 /**
  * Gallery Image Switcher for Segmentation Outputs Tab
@@ -63,9 +62,9 @@ function updateSegGallery(imgSrc, titleText) {
   }
 
   // Toggle outline active state
-  var thumbs = document.querySelectorAll('.gallery-row .gallery-img-wrap');
-  thumbs.forEach(function(thumb, index) {
-    if (index < 3) {
+  var thumbs = document.querySelectorAll('#seg-tab-out .gallery-row .gallery-img-wrap');
+  thumbs.forEach(function(thumb) {
+    {
       thumb.classList.remove('active-thumb');
       var img = thumb.querySelector('img');
       if (img && img.getAttribute('src').indexOf(imgSrc) !== -1) {
@@ -75,80 +74,8 @@ function updateSegGallery(imgSrc, titleText) {
   });
 }
 
-/**
- * Tab switcher for Magnetic Hyperthermia Section
- */
-function switchHypTab(tabId) {
-  // Hide all tabs
-  document.getElementById('hyp-tab-math').style.display = 'none';
-  document.getElementById('hyp-tab-exp').style.display = 'none';
-  document.getElementById('hyp-tab-clinical').style.display = 'none';
-  
-  // Show active tab
-  document.getElementById('hyp-tab-' + tabId).style.display = 'block';
 
-  // Toggle button active classes
-  var parentSection = document.getElementById('hyp-tab-math').parentElement;
-  var btns = parentSection.querySelectorAll('.tab-btn-row:nth-of-type(2) .tab-btn');
-  
-  var hyperBtnRow = document.querySelectorAll('.tab-btn-row')[1];
-  if (hyperBtnRow) {
-    var sectionBtns = hyperBtnRow.querySelectorAll('.tab-btn');
-    sectionBtns.forEach(function(btn, index) {
-      btn.classList.remove('active-tab');
-      if (tabId === 'math' && index === 0) btn.classList.add('active-tab');
-      if (tabId === 'exp' && index === 1) btn.classList.add('active-tab');
-      if (tabId === 'clinical' && index === 2) btn.classList.add('active-tab');
-    });
-  }
-}
 
-/**
- * Tab switcher for Intratumoral Dosage & Heat-Sink Section
- */
-function switchDoseTab(tabId) {
-  // Hide all tabs
-  document.getElementById('dose-tab-injection').style.display = 'none';
-  document.getElementById('dose-tab-sim').style.display = 'none';
-  document.getElementById('dose-tab-results').style.display = 'none';
-  
-  // Show active tab
-  document.getElementById('dose-tab-' + tabId).style.display = 'block';
-
-  // Toggle button active classes
-  var doseBtnRow = document.querySelectorAll('.tab-btn-row')[2];
-  if (doseBtnRow) {
-    var sectionBtns = doseBtnRow.querySelectorAll('.tab-btn');
-    sectionBtns.forEach(function(btn, index) {
-      btn.classList.remove('active-tab');
-      if (tabId === 'injection' && index === 0) btn.classList.add('active-tab');
-      if (tabId === 'sim' && index === 1) btn.classList.add('active-tab');
-      if (tabId === 'results' && index === 2) btn.classList.add('active-tab');
-    });
-  }
-}
-
-/**
- * Tab switcher for ICL Section
- */
-function switchIclTab(tabId) {
-  document.getElementById('icl-tab-map').style.display = 'none';
-  document.getElementById('icl-tab-cfd').style.display = 'none';
-  document.getElementById('icl-tab-val').style.display = 'none';
-  
-  document.getElementById('icl-tab-' + tabId).style.display = 'block';
-
-  var iclBtnRow = document.querySelectorAll('.tab-btn-row')[4];
-  if (iclBtnRow) {
-    var sectionBtns = iclBtnRow.querySelectorAll('.tab-btn');
-    sectionBtns.forEach(function(btn, index) {
-      btn.classList.remove('active-tab');
-      if (tabId === 'map' && index === 0) btn.classList.add('active-tab');
-      if (tabId === 'cfd' && index === 1) btn.classList.add('active-tab');
-      if (tabId === 'val' && index === 2) btn.classList.add('active-tab');
-    });
-  }
-}
 
 /**
  * Gallery Image Switcher for ICL Campus Reconstructions
@@ -550,18 +477,3 @@ function openHighlightModal(element) {
 }
 
 
-/**
- * End-to-end MNP hyperthermia pipeline (Yunnan cases) tab switching
- */
-function switchMnphTab(tabId) {
-  var tabs = ['detect', 'flow', 'plan', 'heat'];
-  tabs.forEach(function(t) {
-    document.getElementById('mnph-tab-' + t).style.display = (t === tabId) ? 'block' : 'none';
-  });
-  var row = document.getElementById('mnph-btn-row');
-  if (row) {
-    row.querySelectorAll('.tab-btn').forEach(function(btn, index) {
-      btn.classList.toggle('active-tab', tabs[index] === tabId);
-    });
-  }
-}
